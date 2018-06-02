@@ -1,0 +1,13 @@
+.center-board {
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
+    text-align: center;
+    font-size: 60em;
+}
+
+.main {
+    height: 50%;
+}

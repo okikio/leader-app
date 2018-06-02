@@ -1,0 +1,19 @@
+- var pages = ["Questions", "History", "Actions", "Solutions", "Sources"];
+
+mixin link (name) 
+  li(class=`navbar-link ${name == title ? 'navbar-link-focus' : ''}`)
+    a(href=`/${name}`)= name
+  
+header.header
+  nav.navbar.navbar-fixed
+    article.navbar-layout
+      section.navbar-head
+        a.navbar-title(href='/')
+          span.navbar-title-txt Science
+      section.navbar-main
+        ul.navbar-list.navbar-list-hide
+          each val in pages
+            +link(val)
+      section.navbar-foot
+        a.icon-btn.navbar-menu
+          i.icon menu

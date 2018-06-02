@@ -1,0 +1,6 @@
+/* Route for easy access to Fonts */
+/*@import "https://fonts.googleapis.com/icon?family=Material+Icons";*/
+@import "./PermanentMarker/style.css";
+@import "./SourceSansPro/style.css";
+@import "./MaterialIcons/style.css";
+@import "./Roboto/style.css";

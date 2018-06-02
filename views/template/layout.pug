@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    meta(name='theme-color' content='#3B4BE6')
+    meta(name='msapplication-navbutton-color' content='#3B4BE6')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
+
+    
+    link(rel='stylesheet' href='./css/pace.min.css')
+    link(rel='stylesheet' href='./css/main.css')
+    
+    //if IE
+      link(rel='shortcut icon' href='./assets/images/logo/Science.ico)
+    
+    link(rel='icon' href='./assets/images/logo/Science.png' sizes='57x57' type='image/png')
+    link(rel='icon' href='./assets/images/logo/Science.svg' sizes='any' type='image/svg+xml')
+    link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
+    link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
+
+    each style in css
+      link(rel='stylesheet' href=style)
+  body
+    include ../components/header.pug
+    main.main
+      section.fadeOut
+        block content
+    include ../components/footer.pug
+  script(src='./js/pace.min.js')
+  script(src='./js/rye.min.js')
+  script(src='./js/main.js')
+  each scripts in js
+    script(src=scripts)

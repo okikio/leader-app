@@ -1,0 +1,21 @@
+extends template/layout
+
+block content
+  section.layout-contain.layout-margin-vert-bottom-small.layout-margin-vert-top-small
+    small
+      a.page-link.color-blue(href='/') Home
+    section.layout-hero
+      img.layout-hero-img(src=hero.src alt=hero.alt)
+      h1.layout-hero-img-txt= title
+  each tile in pagelist
+    section.layout-content.layout-padding-vert(class=`${typeof tile.background === 'string' ? 'layout-' + tile.background : ''}`)
+      section.layout-contain
+        section.tile.tile-small.tile-move
+          section.tile-image
+            img.tile-img(src=tile.hero.src alt=tile.hero.alt)
+          footer.tile-footer
+            h2.tile-title= tile.title
+            span= tile.content
+
+  
+
