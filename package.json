@@ -12,11 +12,14 @@
         "url": "git://github.com/okikio/science-app.git"
     },
     "keywords": [
-        "Civics",
+        "Science",
         "app",
         "web",
         "site"
     ],
+    "engines": {
+        "node": "10.3.0"
+    },
     "author": "Okiki Ojo",
     "license": "GPL-3.0",
     "bugs": {
