@@ -45,13 +45,17 @@ body {
     font-family: "Source Sans Pro", 'Helvetica', "Helvetica Neue", 'Arial', sans-serif;
     transition: all 0.2s ease;
     flex-direction: column;
+    display: -webkit-flex; 
+    display: -ms-flexbox;  
+    display: -webkit-box; 
     background: #131313;
     line-height: 1.15;
+    display: -moz-box;  
     min-height: 100vh;
     font-weight: 400;
     font-size: 15px;
     color: #9d9d9d;
-    display: flex;
+    display: flex;  
     height: 100%;
     width: 100%;
     /*#141414*/
