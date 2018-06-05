@@ -4,15 +4,17 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+push-git*
 
 # Git Pushing
-push-git.txt
+push-git*
 
 # Heroku Test
 /node_modules
 npm-debug.log
 .DS_Store
 /*.env
+push-git*
 
 # Runtime data
 pids

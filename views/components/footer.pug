@@ -1,43 +1,22 @@
-- var pages = ["Questions", "History", "Actions", "Solutions", "Sources"];
-- var prevId = pages.indexOf(title) - 1;
-- var nextId = pages.indexOf(title) + 1;
-- var prev = pages[prevId];
-- var next = pages[nextId];
 mixin link (name) 
   li
-    a.color-red(href=`/${name}`)= name
-      
+    a.color-red(href=`/${name.replace(/\s/g, "-").replace(/\&/g, "and").toLowerCase()}`)= name
+
 footer.footer
-  article.layout-contain
-    section.fadeOut
-      if footbar
-        section.footbar.layout-margin-vert.layout-clearfix
-          section.footbar-link.footbar-link-left.layout-clearfix(class= prevId >= 0 ? '' : 'footbar-link-hide')
-            if prevId >= 0 
-              a.icon-btn-box.color-red.layout-clearfix(href=`/${prev}` title='Previous Article')
-                i.material-icons.footbar-icon chevron_left
-                span.footbar-txt.footer-space-left= prev
-                
-          section.footbar-link.footbar-link-right.layout-clearfix(class= nextId < pages.length ? '' : 'footbar-link-hide')
-            if nextId < pages.length
-              a.icon-btn-box.color-red.layout-clearfix(href=`/${next}` title='Next Article')
-                span.footbar-txt.footer-space-right= next
-                i.material-icons.footbar-icon chevron_right
-              
-        hr.layout-line.fadeOut
+  article.layout-contain.layout-padding-horz
     section.footer-content
-      section.layout-row.layout-margin-vert
+      section.layout-row.layout-padding-vert
+        section.layout-col-12
+          h5.footer-top.footer-top-focus
+            a.icon-btn.color-white
+              i.icon.material-icons expand_less
         section.layout-col-8
-          a.footer-title(href='/')
-            | Science
+          a.footer-title(href='/') Science
         section.layout-col-4
           h5.footer-subtitle Links
           ul.footer-list
-            each val in pages
+            each val in tabs
               +link(val)
-      hr.layout-line
-      section.layout-margin-vert
-        small Copyright © 2018 Okiki Ojo, Under a GNU Licence.
-    h5.footer-top
-      a.icon-btn.color-white
-        i.icon.material-icons expand_less
+      hr.layer-line
+      section.layout-padding-vert
+        small Copyright &copy; 2018 Okiki Ojo, Under a GNU Licence.

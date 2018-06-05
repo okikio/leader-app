@@ -12,8 +12,8 @@ let Parser = function(val, key, router) {
             return router.get('/' + pick(path, ""), route);
         }
         else if (_.isObject(route)) {
-            return router.get('/' + pick(path, ""), function(req, res, next) {
-                res.render(key, route);
+            return router.get('/', function(req, res, next) {
+                res.render(pick(path, ""), route);
             });
         }
     } else if (_.isFunction(val)) {

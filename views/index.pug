@@ -1,21 +1,56 @@
 extends template/layout
 
 block content
-  section.layout-contain.layout-margin-vert-bottom-small.layout-margin-vert-top-small
-    small
-      a.page-link.color-blue(href='/') Home
-    section.layout-hero
-      img.layout-hero-img(src=hero.src alt=hero.alt)
-      h1.layout-hero-img-txt= title
-  each tile in pagelist
-    section.layout-content.layout-padding-vert(class=`${typeof tile.background === 'string' ? 'layout-' + tile.background : ''}`)
-      section.layout-contain
-        section.tile.tile-small.tile-move
-          section.tile-image
-            img.tile-img(src=tile.hero.src alt=tile.hero.alt)
-          footer.tile-footer
-            h2.tile-title= tile.title
-            span= tile.content
-
-  
-
+  section.layer-content
+    section.layer-hero
+      img.layer-hero-img(src=hero.src alt=hero.alt)
+      span.layer-hero-img-txt= title
+    section.layer-shade
+    section.layer-block.layout-padding-horz-small.layout-padding-vert-large-bottom
+      article.layout-contain
+        section.layer.layout-padding-vert-bottom.layout-margin-vert-large-top
+          section.layout-row.layout-padding-vert-bottom
+            sections.layout-col-6
+              section.card.card-float.card-hover
+                sction.card-main
+                  section.card-image
+                    img.card-img(src='/assets/images/windmill1.jpg' alt='An Image of a windmill.')
+                    section.card-img-txt
+                      h3 About
+                section.card-content
+                  p Leukemia is a cancer of the the blood that is often genetic in nature.
+                  a.layout-margin-vert-top-small.color-blue(href='/about') More ...
+            sections.layout-col-6
+              section.card.card-float.card-hover
+                sction.card-main
+                  section.card-image
+                    img.card-img(src='/assets/images/city4.jpg' alt='An Image of a city.')
+                    section.card-img-txt
+                      h3 Health Policies & Tech
+                section.card-content
+                  p Symtoms of Leukemia are very similar to flu often make it hard to diagnose.
+                  a.layout-margin-vert-top-small.color-blue(href='/health-policies-and-tech') More ...
+                  
+          section.layout-row.layout-padding-vert-bottom
+            sections.layout-col-12
+              section.card.card-float.card-hover
+                sction.card-main
+                  section.card-image
+                    img.card-img(src='/assets/images/city2.jpg' alt='An Image of a city.')
+                    section.card-img-txt
+                      h3 Connections
+                section.card-content
+                  p= `Physics, Chemistry have alot in common with Leukemia. For example, Leukemia is diagnosed using x-rays, and a toxic chemical (benzene), alot learned of this I learned from class.` 
+                  a.layout-margin-vert-top-small.color-blue(href='/connections') More ...
+                  
+          section.layout-row
+            sections.layout-col-12
+              section.card.card-float.card-hover
+                sction.card-main
+                  section.card-image
+                    img.card-img(src='/assets/images/windmill3.jpg' alt='An Image of a windmills.')
+                    section.card-img-txt
+                      h3 References
+                section.card-content
+                  p All the sources of information used on this site.
+                  a.layout-margin-vert-top-small.color-blue(href='/references') More ...

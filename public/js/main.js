@@ -8,7 +8,7 @@ var FootTop = $(".footer-top");
 var NavList = $(".navbar-list");
 var Content = $(".fadeOut");
 
-var _Animate, Anim, Avail, _Screen = {};
+var _Animate, Avail, _Screen = {}, Scroll;
 var Ease = function Ease(start, stop, vel) {
     return start + (stop - start) / vel;
 };
@@ -21,6 +21,7 @@ var SetScreen = function SetScreen() {
 };
 
 Menu.on("click", function() {
+    if (window.scrollY < 50) { Navbar.toggleClass("navbar-focus"); }
     return NavList.toggleClass("navbar-list-show");
 });
 
@@ -33,15 +34,17 @@ FootTop.on("click", function() {
     });
 });
 
-window.onload = function(e) {
+Scroll = function() {
+    _Screen = SetScreen();
+    Avail = _Screen.height - _Screen.fullHeight;
+    Navbar.toggleClass("navbar-focus", window.scrollY > 50);
+};
+
+window.onload = function() {
+    Scroll();
     Content.addClass("fadeIn");
-    setTimeout(function () {
+    setTimeout(function() {
         Content.removeClass("fadeOut");
-    }, 4000);
-    window.onscroll = function() {
-        _Screen = SetScreen();
-        Avail = _Screen.height - _Screen.fullHeight;
-        Navbar.toggleClass("navbar-shadow", window.scrollY > 50);
-        FootTop.toggleClass("footer-top-focus", window.scrollY > (Avail / 2));
-    };
+    }, 500);
+    window.onscroll = Scroll;
 };

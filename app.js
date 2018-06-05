@@ -4,11 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var _ = require("underscore");
-var page = require("./util/page");
 
 // List of routers 
 var Router = require('./routes/router');
 var app = express();
+
+// Containers 
+let page = require("./containers/page");
+let title = require("./containers/title");
+let css = require("./containers/css");
+let footbar = require("./containers/footbar");
 
 // List of routes and routers
 let routeList = require("./routes/route") ["routes"];
@@ -41,7 +46,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('404', page({ "title": "Page not Found", "css": ["./css/404.css"], "footbar": false, }));
+    res.render('404', page(title("Page not Found"), footbar(false), css("./css/404.css")));
 });
 
 // catch 502 and forward to error handler
@@ -57,7 +62,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('502', page({ "title": "Bad gateway", "css": ["./css/404.css"], "footbar": false, }));
+    res.render('502', page(title("Bad Gateway"), footbar(false), css("./css/404.css")));
 });
 
 module.exports = app;

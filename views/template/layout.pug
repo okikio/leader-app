@@ -22,13 +22,13 @@ html(lang="en")
     link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
 
+    link(rel='stylesheet' href='./assets/fonts/fonts.css')
     each style in css
       link(rel='stylesheet' href=style)
   body
     include ../components/header.pug
-    main.main
-      section.fadeOut
-        block content
+    main.main.fadeOut
+      block content
     include ../components/footer.pug
   script(src='./js/pace.min.js')
   script(src='./js/rye.min.js')

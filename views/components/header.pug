@@ -1,8 +1,6 @@
-- var pages = ["Questions", "History", "Actions", "Solutions", "Sources"];
-
 mixin link (name) 
-  li(class=`navbar-link ${name == title ? 'navbar-link-focus' : ''}`)
-    a(href=`/${name}`)= name
+  li(class=`navbar-link ${name == tab_focus ? 'navbar-link-focus' : ''}`)
+    a(href=`/${name.replace(/\s/g, "-").replace(/\&/g, "and").toLowerCase()}`)= name
   
 header.header
   nav.navbar.navbar-fixed
@@ -12,7 +10,7 @@ header.header
           span.navbar-title-txt Science
       section.navbar-main
         ul.navbar-list.navbar-list-hide
-          each val in pages
+          each val in tabs
             +link(val)
       section.navbar-foot
         a.icon-btn.navbar-menu
