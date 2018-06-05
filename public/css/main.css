@@ -666,7 +666,7 @@ li.navbar-link-focus a:before {
     margin-left: -0.75rem;
 }
 
-.layout-row [class*="layout-col"] {
+[class*="layout-col"] {
     padding: 0 0.75rem;
     margin-left: auto;
     min-height: 1px;
@@ -676,7 +676,7 @@ li.navbar-link-focus a:before {
 }
 
 @media (max-width: 700px) {
-    .layout-row [class*="layout-col"] {
+    [class*="layout-col"] {
         width: 100%;
     }
 }
@@ -991,7 +991,8 @@ li.navbar-link-focus a:before {
 
 .card .card-image {
 	position: relative;
-	overflow-y: hidden;
+	overflow: hidden;
+	max-height: 320px;
     background: #333;
 	display: block;
 	height: auto;

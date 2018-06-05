@@ -24,18 +24,18 @@ module.exports = {
                 title("How to avoid contracting it?"), 
                 details(
                     "Exposure to ionizing radioactive substances, antibiotic chloramphenicol, and benzene increase the chances of developing Leukemia, so I highly suggest you avoid these substances, however, beware this is not a sure fire solution as Leukemia is also known to be genetic. For example did you know Marie Curie and her daughter Irene Joliot-Curie died of Leukemia."), 
-                img("/assets/images/windmill1.jpg", "Pictures of wind mills."),
+                img("/assets/images/radioactive.png", "Radioactive symbol."),
                 title("How is it diagnosed?"), 
                 details(
                     "There is currently no way to diagnose Leukemia, however, a full physical screening can determine symptoms, A complete blood count (CBC) may also be given, as well as a spinal tap. Leukemia is tested through blood test and bone marrow test (taking a piece of bone marrow from the hip bone for testing). Standard imaging tests may be used to check the movement of Leukemic cells and whether or not they have invaded other areas of the body."), 
-                img("/assets/images/Cells.png", "A Picture of Leukemia as it overwhelms normal cells."),
+                img("/assets/images/xray.jpg", "A Picture of an xray."),
                 title("Symtoms?"), 
                 details(
                     "Signs of Leukemia include bone pain, no appetite, weight loss, night sweats, frequent infections, swollen lymph nodes, and an enlarged liver or spleen. Symptoms also include weakness or chronic fatigue fever, chills, and flu, weight loss, frequent bacterial or viral infections, viscous (sticky) blood, headache, bone pain, easy bruising, bleeding from gums or nose, blood in urine, night sweats, sores in the eyes or on the skin. "), 
                 title("How is it treated?"), 
                 details(
                     "Unfortunatly as of now there is no cure for Leukemia, however ther are some treatments. Leukemia is treated with chemotherapy (medicines designed to attack bad cells), some treatments need bone marrow transplants. Some chemotherapy kill good white blood cells, and result in fatigue, nausea, and vomiting, hair loss, risk of infection, need for blood transfusion, and problems with fertility. Bone marrow transplants are also a vaiable option when it comes to treatment, however, bone marrow transplants often wipes out patients immunity. Many patients experience relapse of Leukemia after treatments. Leukemia patients undergo 3 types of chemotherapy fludarabine (Fludara), pentostatin (Nipent), cladribine (2-CdA, Leustatin) Mono-clonal antibodies are standard treatment of Leukemia examples of Mono-clonal antibodies are the antibody rituximab (Rituxan), alemtuzumab (Campath), and ofatumumab (Arzerra). Radiation therapy is often used to treat patients with enlarged organs because of Leukemia many patients require 5 day radiation treatments that last decades. Thou experimental and not proven some patients undergo bone marrow transplant or PBSCT. Immunotherapy helps treat Leukemia by the use of proteins that target leukemia cells. Some Cancer cells fight back against treatment so doctors prescribe cocktails of drugs to fight against the cancer cell. Imatinib (released in 2001) specifically targets the abnormal BCR-ABL protein produced in CML, they don’t cure CML but control the disease. Immunotherapy using interferon-alpha therapy is sometimes used but as high side effects, Chemotherapy agents often used include hydroxyurea (Hydrea), cytarabine (Ara-C), busulfan, cyclophosphamide (Cytoxan), and vincristine (Oncovin). Radiation is not often used however is used to treat pain from bone damaged caused by CML. Allogeneic stem cell (bone marrow) transplant remains the only viable option to cure CML, side effects include long hospital stay, and long-term after effects."), 
-                img("/assets/images/Cells.png", "A Picture of Leukemia as it overwhelms normal cells."),
+                img("/assets/images/chemo.jpg", "A Picture of Chemotherapy."),
                 title("Life expectancy?"), 
                 details(
                     "CLL patients often die rapidly within two to three years after diagnosis from the complications of the Leukemia, there is a five-year survival rate of 50%-60%.")
@@ -46,7 +46,9 @@ module.exports = {
                 tile(src("/assets/images/city2.jpg"), title("Connections")), 
                 title("Chemistry & Physics involved?"), 
                 details(
-                    "The physics involved are the medical technologies used to diagnose Leukemia, for example the x-ray. The x-rays sends x-ray waves into the body onto a photogenic film creating an x-ray of the body, which I learned from class. The chemistry involved are the toxic material that can lead to Leukemia liquid benzene. Liquid benzene has a formula of C6H6 which stands for Hexacarbon Hexahydride. I learned how to read this formula in chemistry where we did activities on convering between word formulas and equation formulas.")
+                    "The physics involved are the medical technologies used to diagnose Leukemia, for example the x-ray. The x-rays sends x-ray waves into the body onto a photogenic film creating an x-ray of the body, which I learned from class. The chemistry involved are the toxic material that can lead to Leukemia liquid benzene. Liquid benzene has a formula of C6H6 which stands for Hexacarbon Hexahydride. I learned how to read this formula in chemistry where we did activities on convering between word formulas and equation formulas."),
+                img("/assets/images/benzene.png", "A Picture of the chemical formula for Benzene."),
+                img("/assets/images/xray.jpg", "A Picture of an xray.")
             )
         )), "template/page"],
         "references": [page(title("Leukemia"), tab_focus("References"), hero(), content(
