@@ -1,4 +1,5 @@
 git push heroku master 
 git add -A 
 git commit -m "Upgrade Commit" 
-git push -u origin master heroku ps
+git push -u origin master 
+heroku ps
