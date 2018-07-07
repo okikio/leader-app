@@ -12,20 +12,18 @@ html(lang="en")
     
     //if IE
       link(rel='shortcut icon' href='./assets/images/logo/Science.ico)
-    
+
+    link(rel='stylesheet' href='./assets/fonts/fonts.css')
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='57x57' type='image/png')
     link(rel='icon' href='./assets/images/logo/Science.svg' sizes='any' type='image/svg+xml')
     link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
-
-    link(rel='stylesheet' href='./assets/fonts/fonts.css')
     link(rel='stylesheet' href='./css/main.min.css')
     if typeof css !== "undefined"
       each style in css
         link(rel='stylesheet' href=style)
       
     script(src='./js/rye.min.js')
-    
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)
@@ -34,4 +32,5 @@ html(lang="en")
     main.main.fadeOut
       block content
     include ../components/footer.pug
+  script(src='./js/load.js')
   script(src='./js/main.min.js')
