@@ -9,7 +9,6 @@ html(lang="en")
     meta(name='msapplication-navbutton-color' content='#3B4BE6')
     meta(name='apple-mobile-web-app-capable' content='yes')
     meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
-    link(rel='stylesheet' href='./css/main.min.css')
     
     //if IE
       link(rel='shortcut icon' href='./assets/images/logo/Science.ico)
@@ -20,12 +19,12 @@ html(lang="en")
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
 
     link(rel='stylesheet' href='./assets/fonts/fonts.css')
+    link(rel='stylesheet' href='./css/main.min.css')
     if typeof css !== "undefined"
       each style in css
         link(rel='stylesheet' href=style)
       
     script(src='./js/rye.min.js')
-    script(src='./js/main.min.js')
     
     if typeof js !== "undefined"
       each scripts in js
@@ -35,3 +34,4 @@ html(lang="en")
     main.main.fadeOut
       block content
     include ../components/footer.pug
+  script(src='./js/main.min.js')
