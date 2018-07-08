@@ -26,6 +26,7 @@
     "url": "https://github.com/okikio/science-app/issues"
   },
   "dependencies": {
+    "compression": "1.7.2",
     "connect": "3.6.6",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
