@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var _ = require("underscore");
+var compress = require('compression');
 
 // List of routers 
 var Router = require('./routes/router');
@@ -22,6 +23,7 @@ let routeList = require("./routes/route") ["routes"];
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(compress()); 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
