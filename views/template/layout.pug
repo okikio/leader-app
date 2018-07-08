@@ -24,11 +24,11 @@ html(lang="en")
         link(rel='stylesheet' href=style)
   body
     script(src='./js/rye.min.js')
-    script(src='./js/main.min.js')
     include ../components/header.pug
     main.main
       block content
     include ../components/footer.pug
+    script(src='./js/main.min.js')
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)
