@@ -1,6 +1,6 @@
 var _ = require("underscore");
-let _src = require("./src");
-let _alt = require("./alt");
+var _src = require("./src");
+var _alt = require("./alt");
 
 // Shared similarites between img containers
 module.exports = function(src, alt) {

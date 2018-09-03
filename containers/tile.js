@@ -1,7 +1,7 @@
 var _ = require("underscore");
-let _src = require("./src");
-let _alt = require("./alt");
-let _title = require("./title");
+var _src = require("./src");
+var _alt = require("./alt");
+var _title = require("./title");
 
 // Shared similarites between content containers 
 module.exports = function(/* ... args, ... */) {

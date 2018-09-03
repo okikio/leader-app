@@ -1,13 +1,13 @@
 var express = require('express');
 var _ = require("underscore");
 
-let pick = require("../util/pick");
-let routers = require("./route")["routers"];
+var pick = require("../util/pick");
+var routers = require("./route")["routers"];
 
 // Parse the values from the routes Object
-let Parser = function(val, key, router) {
+var Parser = function(val, key, router) {
     if (_.isArray(val)) {
-        let route = val[0], path = val[1];
+        var route = val[0], path = val[1];
         if (_.isFunction(route)) {
             return router.get('/' + pick(path, ""), route);
         }
@@ -26,7 +26,7 @@ let Parser = function(val, key, router) {
 };
 
 // Converts the values from the routes to an Object full of routes `{ key: route }``
-let ParseRoutes = function(list) {
+var ParseRoutes = function(list) {
     return _.reduce(list, function(obj, val, key) {
         var router = express.Router();
         if (!_.isUndefined(val)) {

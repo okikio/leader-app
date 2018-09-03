@@ -1,5 +1,5 @@
 var _ = require("underscore");
-let pick = require("../util/pick");
+var pick = require("../util/pick");
 
 // Shared similarites between hero containers
 module.exports = function(footbar) {

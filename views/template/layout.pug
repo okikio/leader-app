@@ -1,13 +1,21 @@
 doctype html
 html(lang="en")
   head
-    title= title
     link(rel='stylesheet' href='./assets/fonts/fonts.css')
     link(rel='stylesheet' href='./css/main.min.css')
     
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    
+    title= title
+    
+    meta(content="website" property="og:type")
+    meta(content="Science" property="og:title")
+    meta(content="A website containing Science projects. It's is one of a series of websites built by Okiki Ojo for school subjects." property="og:description")
+    meta(name="description" content="A website containing Science projects. It's is one of a series of websites built by Okiki Ojo for school subjects.")
+  
     meta(name='theme-color' content='#3B4BE6')
     meta(name='msapplication-navbutton-color' content='#3B4BE6')
     meta(name='apple-mobile-web-app-capable' content='yes')
@@ -20,6 +28,7 @@ html(lang="en")
     link(rel='icon' href='./assets/images/logo/Science.svg' sizes='any' type='image/svg+xml')
     link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
+    link(content="https://app-science.herokuapp.com/" rel="canonical")
     if typeof css !== "undefined"
       each style in css
         link(rel='stylesheet' href=style)

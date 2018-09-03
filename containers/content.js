@@ -1,5 +1,5 @@
 var _ = require("underscore");
-let layer = require("./layer");
+var layer = require("./layer");
 
 // Shared similarites between content containers 
 module.exports = function(/* ... layers, ... */) {

@@ -1,4 +1,4 @@
-let _ = require("underscore");
+var _ = require("underscore");
 
 // Choose the defined value in a list of 2 values
 module.exports = function(val1, val2) {
