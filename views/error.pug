@@ -2,6 +2,7 @@ extends template/layout
 
 block content
   section.layout-contain.center-board.layout-padding-vert.layout-margin-vert
-    h1.color-blue Oops!
-    h4
-      | Sorry, there was a bad gateway reload the page or wait and try again later. 
+    h1.color-blue= title
+    h4= details
+    h5
+      a.color-blue(href='/') Go to our Homepage

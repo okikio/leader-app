@@ -3,6 +3,8 @@ html(lang="en")
   head
     title= title
     link(rel='stylesheet' href='./assets/fonts/fonts.css')
+    link(rel='stylesheet' href='./css/main.min.css')
+    
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
@@ -18,17 +20,16 @@ html(lang="en")
     link(rel='icon' href='./assets/images/logo/Science.svg' sizes='any' type='image/svg+xml')
     link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
     link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
-    link(rel='stylesheet' href='./css/main.min.css')
     if typeof css !== "undefined"
       each style in css
         link(rel='stylesheet' href=style)
   body
-    script(src='./js/rye.min.js')
     include ../components/header.pug
     main.main
       block content
     include ../components/footer.pug
-    script(src='./js/main.min.js')
+    script(src='./js/jquery.min.js' async)
+    script(src='./js/main.min.js' async)
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)

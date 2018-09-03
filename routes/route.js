@@ -137,5 +137,10 @@ module.exports = {
         "/references": "references",
         "/about": "about",
         '/': "index",
-    }
+    },
+    
+    // Error pages
+    "errors": {
+        "404": [title("Page not Found"), details("Sorry, the page you were trying to load doesn't exist.")]
+    },
 };

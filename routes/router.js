@@ -42,3 +42,5 @@ let ParseRoutes = function(list) {
 module.exports = function(route) {
     return ParseRoutes(routers) [route] ();
 };
+
+_.extend(module.exports, { ParseRoutes: ParseRoutes, Parser: Parser })
