@@ -15,6 +15,9 @@ html(lang="en")
     meta(content="Science" property="og:title")
     meta(content="A website containing Science projects. It's is one of a series of websites built by Okiki Ojo for school subjects." property="og:description")
     meta(name="description" content="A website containing Science projects. It's is one of a series of websites built by Okiki Ojo for school subjects.")
+    meta(name="keywords" content="Science, App, Projects, Okiki, Ojo")   
+    meta(name="copyright" content="Copyright &copy; 2018 Okiki Ojo, Under a GNU Licence.")
+    meta(name="author" content="Okiki Ojo")
   
     meta(name='theme-color' content='#3B4BE6')
     meta(name='msapplication-navbutton-color' content='#3B4BE6')
@@ -38,7 +41,7 @@ html(lang="en")
       block content
     include ../components/footer.pug
     script(src='./js/jquery.min.js' async)
-    script(src='./js/main.min.js' async)
+    script(src='./js/main.min.js')
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)
