@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
+    "devstart": "nodemon ./bin/www",
+    "svg-folder": "svg-optimizer folder='./public/assets/fonts'",
+    "svg-file": "svg-optimizer file='./example.svg'"
   },
   "repository": {
     "type": "git",
@@ -31,11 +33,13 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "4.16.3",
+    "express-generator": "4.16.0",
     "http-errors": "1.6.3",
     "morgan": "~1.9.0",
     "now": "11.4.1",
     "pug": "2.0.0-beta11",
     "pug-cli": "1.0.0-alpha6",
+    "svgo": "1.0.5",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
