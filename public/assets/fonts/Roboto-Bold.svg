@@ -187,7 +187,7 @@ d="M0 1456h295l608 -1581h-296z" />
 d="M13 1694h432v-2033h-432v223h143v1587h-143v223z" />
     <glyph glyph-name="asciicircum" unicode="^" horiz-adv-x="895" 
 d="M448 1186l-174 -457h-230l299 727h210l299 -727h-229z" />
-    <glyph glyph-name="underscore" unicode="_" horiz-adv-x="914" 
+    <glyph glyph-name="underscore" unicode= horiz-adv-x="914" 
 d="M912 -226h-911v226h911v-226z" />
     <glyph glyph-name="grave" unicode="`" horiz-adv-x="677" 
 d="M565 1226h-237l-276 310h315z" />

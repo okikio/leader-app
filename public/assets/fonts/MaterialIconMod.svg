@@ -3440,7 +3440,7 @@ d="M0 0z" />
 d="M0 0z" />
     <glyph glyph-name="nine" unicode="9" 
 d="M0 0z" />
-    <glyph glyph-name="underscore" unicode="_" 
+    <glyph glyph-name="underscore" unicode= 
 d="M0 0z" />
     <glyph glyph-name="a" unicode="a" 
 d="M0 0z" />

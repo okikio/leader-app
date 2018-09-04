@@ -3249,7 +3249,7 @@ d="M41 223v57h718v-57h-718z" />
 d="M125 259q-25 0 -42.5 17.5t-17.5 44.5q0 29 17.5 46.5t42.5 17.5q24 0 41.5 -17.5t17.5 -46.5q0 -27 -17.5 -44.5t-41.5 -17.5z" />
     <glyph glyph-name="bullet" unicode="&#x2022;" horiz-adv-x="304" 
 d="M152 143q-23 0 -43 8.5t-35.5 24.5t-24.5 38t-9 49t9 49.5t24.5 38t35.5 24.5t43 9q22 0 42.5 -9t36 -24.5t24.5 -38t9 -49.5t-9 -49t-24.5 -38t-36 -24.5t-42.5 -8.5z" />
-    <glyph glyph-name="underscore" unicode="_" horiz-adv-x="500" 
+    <glyph glyph-name="underscore" unicode= horiz-adv-x="500" 
 d="M12 -126v55h476v-55h-476z" />
     <glyph glyph-name="uni203E" unicode="&#x203e;" horiz-adv-x="500" 
 d="M12 568v55h476v-55h-476z" />
