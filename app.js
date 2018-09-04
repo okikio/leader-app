@@ -28,7 +28,7 @@ http.globalAgent.maxSockets = 50;
 
 // Compress/GZIP Server
 app.use(compress()); 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 12090 }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
