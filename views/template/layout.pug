@@ -41,8 +41,8 @@ html(lang="en")
     main.main
       block content
     include ../components/footer.pug
-    script(src='./js/jquery.min.js' defer)
-    script(src='./js/main.min.js' defer)
+    script(src='./js/jquery.min.js')
+    script(src='./js/main.min.js')
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)
