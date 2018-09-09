@@ -1,8 +1,8 @@
 doctype html
 html(lang="en")
   head
-    link(rel='stylesheet' href='./assets/fonts/fonts.css')
-    link(rel='stylesheet' href='./css/main.min.css')
+    link(rel='stylesheet' href='/assets/fonts/fonts.css')
+    link(rel='stylesheet' href='/css/main.min.css')
     
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
@@ -37,12 +37,14 @@ html(lang="en")
       each style in css
         link(rel='stylesheet' href=style)
   body
+    div.cover
+      div.shade
+      div.loader
     include ../components/header.pug
     main.main
       block content
     include ../components/footer.pug
-    script(src='./js/jquery.min.js')
-    script(src='./js/main.min.js')
+    script(src='/js/app.min.js')
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts)

@@ -30,7 +30,7 @@ http.globalAgent.maxSockets = 50;
 app.use(compress()); 
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 12090 }));
 
-// view engine setup
+// View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('view cache', true);

@@ -18,7 +18,7 @@ var js = require("../containers/js");
 module.exports = {
     // List of routers
     "routers": {
-        "health policies & tech": [page(title("Leukemia"), tab_focus("Health Policies & Tech"), hero(), content(
+        "health policies & tech": [page(title("Leukemia"), tab_focus("Health Policies and Tech"), hero(), content(
             layer(
                 tile(src("/assets/images/city5.jpg"), title("Health Policies & Tech")), 
                 title("How to avoid contracting it?"), 

@@ -1,6 +1,7 @@
 mixin link (name) 
-  li(class=`navbar-link ${name == tab_focus ? 'navbar-link-focus' : ''}`)
-    a(href=`/${name.replace(/\s/g, "-").replace(/\&/g, "and").toLowerCase()}`)= name
+  - let toLink = function (val) { return val.replace(/\s/g, "-").replace(/\&/g, "and").toLowerCase(); }; 
+  li(class=`navbar-link ${toLink(name) == toLink(tab_focus) ? 'navbar-link-focus' : ''}`)
+    a(href=`/${toLink(name)}`)= name
   
 header.header
   nav.navbar.navbar-fixed

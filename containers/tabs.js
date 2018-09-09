@@ -5,5 +5,6 @@ module.exports = function(/* ... args, ... */) {
     var args = _.toArray(arguments);
     return { 
         "tabs": args.length == 0 ? ["About", "Health Policies & Tech", "Connections", "References"] : args
+        // ["About", "Leukemia", "How was the speed of light determined?", "References"]
     }; 
 };
