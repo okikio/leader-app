@@ -1,6 +1,4 @@
 var gulp = require('gulp');
-var pug = require('gulp-pug');
-var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
