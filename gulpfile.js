@@ -15,6 +15,11 @@ gulp.task('default', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/js'));
     
+  gulp.src('client/js/*.js')
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('public/js'));
+    
   gulp.src(['client/assets/images/*'])
     .pipe(imagemin())
     .pipe(gulp.dest('public/assets/images'));
