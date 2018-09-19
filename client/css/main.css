@@ -569,17 +569,17 @@ li.navbar-link-focus a:before {
         overflow: visible;
         display: flex
     }
-    li.navbar-link {
-        position: relative;
-        display: block;
-        float: left
-    }
     ul.navbar-list {
         justify-content: left;
         overflow: visible;
         max-height: 100%;
         display: flex;
         flex: 1
+    }
+    li.navbar-link {
+        position: relative;
+        display: block;
+        float: left
     }
     li.navbar-link a {
         padding: 0 24px

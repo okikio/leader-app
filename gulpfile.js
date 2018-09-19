@@ -1,31 +1,35 @@
 var gulp = require('gulp');
-var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCSS = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
-var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', function() {
-  gulp.src('client/js/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
-    .pipe(sourcemaps.write())
+function js () {
+  gulp.src(['client/js/*.js', '!client/js/*.min.js'])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/js'));
     
-  gulp.src('client/js/*.js')
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+  gulp.src('client/js/*.min.js')
     .pipe(gulp.dest('public/js'));
-    
-  gulp.src(['client/assets/images/*'])
-    .pipe(imagemin())
-    .pipe(gulp.dest('public/assets/images'));
-    
+}
+
+function css () {
   gulp.src('client/css/*.css')
     .pipe(minifyCSS())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('public/css'));
-});
+}
+
+function image () {
+  gulp.src('client/css/*.css')
+    .pipe(minifyCSS())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('public/css'));
+}
+
+gulp.task('image', image);
+gulp.task('css', css);
+gulp.task('js', js);
+
+gulp.task('default', function() { image(); js(); css(); });
