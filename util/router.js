@@ -2,7 +2,7 @@ var express = require('express');
 var _ = require("underscore");
 
 var pick = require("../util/pick");
-var routers = require("./route")["routers"];
+var routers = require("../render.min")["route"]["routers"];
 
 // Parse the values from the routes Object
 var Parser = function(val, key, router) {

@@ -10,7 +10,7 @@ var js = require("./js");
 
 // Shared similarites between page containers
 module.exports = function(/* ...args */) {
-    var defaults = _.extend({}, title(), tabs(), tab_focus(), footbar(), hero(), content(), css(), js(), { require: require });
+    var defaults = _.extend({}, title(), tabs(), tab_focus(), footbar(), hero(), content(), css(), js());
     var containers = _.extend.apply(null, 
         [{}].concat(_.toArray(arguments)) 
     );

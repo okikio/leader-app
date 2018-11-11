@@ -19,7 +19,7 @@ var footbar = require("./containers/footbar");
 var details = require("./containers/details");
 
 // List of routes and routers
-var routes = require("./routes/route");
+var routes = require("../render.min")["route"];
 var routeList = routes ["routes"];
 var errors = routes ["errors"];
 
