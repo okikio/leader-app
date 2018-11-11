@@ -10,7 +10,7 @@ module.exports = {
                         "Connections",
                         "References"
                     ],
-                    "tab_focus": "Health Policies and Tech",
+                    "tab_focus": "Health Policies & Tech",
                     "footbar": true,
                     "hero": {
                         "src": "/assets/images/city.jpg",
