@@ -141,6 +141,6 @@ module.exports = {
     
     // Error pages
     "errors": {
-        "404": [title("Page not Found"), details("Sorry, the page you were trying to load doesn't exist.")]
+        "404": page(title("Page not Found"), details("Sorry, the page you were trying to load doesn't exist."), footbar(false), css("./css/error.min.css"))
     },
 };

@@ -11,13 +11,6 @@ var compress = require('compression');
 var Router = require('./util/router');
 var app = express();
 
-// Containers 
-var page = require("./containers/page");
-var title = require("./containers/title");
-var css = require("./containers/css");
-var footbar = require("./containers/footbar");
-var details = require("./containers/details");
-
 // List of routes and routers
 var routes = require("./render.min")["route"];
 var routeList = routes ["routes"];
@@ -56,7 +49,7 @@ _.each(errors, function(_router, route, obj) {
     app.use(function(err, req, res, next) {
         // Render the error page
         res.status(err.status || 500);
-        res.render('error', page.apply({}, [title("Error"), { hotword: "Oops!" }, details("There was a " + (err.status || 500) + " error."), footbar(false), css("./css/error.min.css")].concat(_router)));
+        res.render('error', _router);
     });
 });
 

@@ -369,14 +369,29 @@ module.exports = {
             "/": "index"
         },
         "errors": {
-            "404": [
-                {
-                    "title": "Page not Found"
+            "404": {
+                "title": "Page not Found",
+                "tabs": [
+                    "About",
+                    "Health Policies & Tech",
+                    "Connections",
+                    "References"
+                ],
+                "tab_focus": "Focus",
+                "footbar": false,
+                "hero": {
+                    "src": "/assets/images/city.jpg",
+                    "alt": "An iamge of a bustling city."
                 },
-                {
-                    "details": "Sorry, the page you were trying to load doesn't exist."
-                }
-            ]
+                "content": {
+                    "layers": []
+                },
+                "css": [
+                    "./css/error.min.css"
+                ],
+                "js": [],
+                "details": "Sorry, the page you were trying to load doesn't exist."
+            }
         }
     }
 };
