@@ -8,7 +8,7 @@ var _ = require("underscore");
 var compress = require('compression');
 
 // List of routers 
-var Router = require('./routes/router');
+var Router = require('./util/router');
 var app = express();
 
 // Containers 
@@ -19,7 +19,7 @@ var footbar = require("./containers/footbar");
 var details = require("./containers/details");
 
 // List of routes and routers
-var routes = require("../render.min")["route"];
+var routes = require("./render.min")["route"];
 var routeList = routes ["routes"];
 var errors = routes ["errors"];
 
