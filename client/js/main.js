@@ -49,7 +49,6 @@ Menu.on("click", function() {
             r = a.getAttribute("class");
         t.onload = function() {
                 var o = $(t);
-                console.log(a)
                 o.attr("alt", e), o.attr("class", r), a.before(o.get(0)), $(a).remove()
             },
             t.onerror = function(o) {
