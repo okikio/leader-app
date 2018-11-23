@@ -223,25 +223,6 @@ li {
 }
 
 div.cover {
-    display: none;
-}
-
-div div.shade,
-div.cover {
-    transition: 0.5s all ease;
-    width: 100%;
-    height: 100%;
-    z-index: 3000;
-}
-
-div.load div.shade,
-div.load.cover {
-    width: 100%;
-    height: 100%;
-    z-index: 3000;
-}
-
-div.load.cover {
     position: fixed;
     top: 0;
     left: 0;
@@ -249,13 +230,27 @@ div.load.cover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh
+    min-height: 100vh;
+}
+
+div.cover div.shade,
+div.cover {
+    transition: 0.5s all ease;
+    width: 100%;
+    height: 100%;
+    z-index: -3000;
+    opacity: 0;
+}
+
+div.load.cover {
+    z-index: 3000;
+    opacity: 1;
 }
 
 div.load div.shade {
-    background: #fff;
+    background: #000;
     display: block;
-    opacity: .5
+    opacity: .5 !important;
 }
 
 div.load div.loader {
@@ -268,7 +263,7 @@ div.load div.loader {
     border-bottom-color: transparent;
     display: block;
     z-index: 3050;
-    animation: rot .8s linear infinite
+    animation: rot .8s linear infinite;
 }
 
 .style-shadow1 {
