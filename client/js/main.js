@@ -42,6 +42,9 @@ Menu.on("click", function() {
     $(window).scroll(function() {
         Navbar[(window.scrollY > 50 || NavList.hasClass("navbar-list-show") && $(window).width() < 700 ? 'add' : 'remove') + 'Class']("navbar-focus")
     }),
+    $("div.cover").on("click", function () { 
+        $(this).removeClass("load")
+    }),
     LoadImg.each(function(o, a) {
         var t = new Image,
             n = a.getAttribute("src"),

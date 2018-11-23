@@ -45,7 +45,7 @@ section.layer-content
                 span.footbar-txt.footer-space-left= prev
                 
           section.footbar-link.footbar-link-right.layout-clearfix
-            if nextId < tabs.length - 1
+            if nextId < tabs.length
               a.icon-btn-box.layout-clearfix(href=`/${next.replace(/\s/g, "-").replace(/\&/g, "and").toLowerCase()}` title='Next Article')
                 span.footbar-txt.footer-space-right= next
                 i.icon-btn.material-icons.footbar-icon chevron_right
