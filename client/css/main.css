@@ -223,14 +223,22 @@ li {
 }
 
 div.cover {
-    display: none
+    display: none;
+}
+
+div div.shade,
+div.cover {
+    transition: 0.5s all ease;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
 }
 
 div.load div.shade,
 div.load.cover {
     width: 100%;
     height: 100%;
-    z-index: 3000
+    z-index: 3000;
 }
 
 div.load.cover {
