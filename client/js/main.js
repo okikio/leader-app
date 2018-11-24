@@ -51,7 +51,7 @@ $(document).ready(function() {
         $("a[href^='/']").click(function(e) {
             $("div.cover").addClass("load");
         })
-    }, 1500);
+    }, 500);
     LoadImg.each(function(o, a) {
         var t = new Image,
             n = a.getAttribute("src"),
