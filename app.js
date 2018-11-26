@@ -24,6 +24,10 @@ app.locals = {
 // Compress/GZIP Server
 app.use(compress());
 app.use(staticify.middleware);
+app.use(function(req, res, next) {
+    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg)$/, '/$1.$2');
+    next();
+});
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
 
 // View engine setup

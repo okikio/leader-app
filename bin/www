@@ -6,12 +6,12 @@
 
 var app = require('../app');
 var debug = require('debug')('workspace:server');
-// var http = require('http');
+var http = require('http');
 var spdy = require('spdy');
 var path = require('path');
 var fs = require('fs');
 
-// HTTP2 Folder Path
+// HTTP2 Folder Path [https://webapplog.com/http2-node/]
 let http2 = path.normalize(__dirname + '/../') + 'http2/';
 
 // HTTP/2
@@ -31,8 +31,8 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = spdy.createServer(options, app); // http.createServer(app);
-
+var server =  http.createServer(app)
+// spdy.createServer(options, app)
 /**
  * Listen on provided port, on all network interfaces.
  */

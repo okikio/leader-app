@@ -13,7 +13,7 @@ module.exports = {
                     "tab_focus": "Health Policies & Tech",
                     "footbar": true,
                     "hero": {
-                        "src": "/assets/images/city.jpg",
+                        "src": "/images/city.jpg",
                         "alt": "An iamge of a bustling city."
                     },
                     "content": {
@@ -94,7 +94,7 @@ module.exports = {
                     "tab_focus": "Connections",
                     "footbar": true,
                     "hero": {
-                        "src": "/assets/images/city.jpg",
+                        "src": "/images/city.jpg",
                         "alt": "An iamge of a bustling city."
                     },
                     "content": {
@@ -145,7 +145,7 @@ module.exports = {
                     "tab_focus": "References",
                     "footbar": true,
                     "hero": {
-                        "src": "/assets/images/city.jpg",
+                        "src": "/images/city.jpg",
                         "alt": "An iamge of a bustling city."
                     },
                     "content": {
@@ -185,7 +185,7 @@ module.exports = {
                     "tab_focus": "About",
                     "footbar": true,
                     "hero": {
-                        "src": "/assets/images/city.jpg",
+                        "src": "/images/city.jpg",
                         "alt": "An iamge of a bustling city."
                     },
                     "content": {
@@ -235,7 +235,7 @@ module.exports = {
                 "tab_focus": "Focus",
                 "footbar": false,
                 "hero": {
-                    "src": "/assets/images/city.jpg",
+                    "src": "/images/city.jpg",
                     "alt": "An iamge of a bustling city."
                 },
                 "content": {
@@ -380,7 +380,7 @@ module.exports = {
                 "tab_focus": "Focus",
                 "footbar": false,
                 "hero": {
-                    "src": "/assets/images/city.jpg",
+                    "src": "/images/city.jpg",
                     "alt": "An iamge of a bustling city."
                 },
                 "content": {

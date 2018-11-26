@@ -13,7 +13,7 @@
         "dev": "nodemon ./bin/www",
         "start": "node ./bin/www",
         "devstart": "nodemon ./bin/www",
-        "svg-folder": "svg-optimizer folder='./public/assets/fonts'",
+        "svg-folder": "svg-optimizer folder='./public/fonts'",
         "svg-file": "svg-optimizer file='./example.svg'",
         "build": "node ./bin/build"
     },
