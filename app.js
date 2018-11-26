@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var _ = require("underscore");
 var compress = require('compression');
+var staticify = require('staticify')(path.join(__dirname, 'public'));
 
 // List of routers 
 var Router = require('./util/router');
@@ -13,15 +14,17 @@ var app = express();
 
 // List of routes and routers
 var routes = require("./render.min")["route"];
-var routeList = routes ["routes"];
-var errors = routes ["errors"];
+var routeList = routes["routes"];
+var errors = routes["errors"];
 
-// Use http/https as necessary
-http.globalAgent.maxSockets = 50;
+app.locals = {
+    getVersionedPath: staticify.getVersionedPath
+};
 
 // Compress/GZIP Server
-app.use(compress()); 
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: 12090 }));
+app.use(compress());
+app.use(staticify.middleware);
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +38,7 @@ app.use(cookieParser());
 
 // Set route to routers 
 _.each(routeList, function(_router, route, obj) {
-    app.use(route, Router(_router)); 
+    app.use(route, Router(_router));
 });
 
 // Set route to routers (for errors)

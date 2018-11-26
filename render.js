@@ -21,7 +21,7 @@ module.exports = {
                             [
                                 {
                                     "tile": {
-                                        "src": "/assets/images/city5.jpg",
+                                        "src": "/images/city5.jpg",
                                         "alt": "An iamge of a bustling city.",
                                         "title": "Health Policies & Tech"
                                     }
@@ -34,7 +34,7 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/radioactive.png",
+                                        "src": "/images/radioactive.png",
                                         "alt": "Radioactive symbol."
                                     }
                                 },
@@ -46,7 +46,7 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/xray.jpg",
+                                        "src": "/images/xray.jpg",
                                         "alt": "A Picture of an xray."
                                     }
                                 },
@@ -64,7 +64,7 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/chemo.jpg",
+                                        "src": "/images/chemo.jpg",
                                         "alt": "A Picture of Chemotherapy."
                                     }
                                 },
@@ -102,7 +102,7 @@ module.exports = {
                             [
                                 {
                                     "tile": {
-                                        "src": "/assets/images/city2.jpg",
+                                        "src": "/images/city2.jpg",
                                         "alt": "An iamge of a bustling city.",
                                         "title": "Connections"
                                     }
@@ -115,13 +115,13 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/benzene.png",
+                                        "src": "/images/benzene.png",
                                         "alt": "A Picture of the chemical formula for Benzene."
                                     }
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/xray.jpg",
+                                        "src": "/images/xray.jpg",
                                         "alt": "A Picture of an xray."
                                     }
                                 }
@@ -153,7 +153,7 @@ module.exports = {
                             [
                                 {
                                     "tile": {
-                                        "src": "/assets/images/windmill3.jpg",
+                                        "src": "/images/windmill3.jpg",
                                         "alt": "An iamge of a bustling city.",
                                         "title": "References"
                                     }
@@ -193,7 +193,7 @@ module.exports = {
                             [
                                 {
                                     "tile": {
-                                        "src": "/assets/images/windmill1.jpg",
+                                        "src": "/images/windmill1.jpg",
                                         "alt": "An iamge of a bustling city.",
                                         "title": "About"
                                     }
@@ -212,7 +212,7 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/assets/images/Cells.png",
+                                        "src": "/images/Cells.png",
                                         "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                     }
                                 }
@@ -243,7 +243,7 @@ module.exports = {
                         [
                             {
                                 "tile": {
-                                    "src": "/assets/images/windmill1.jpg",
+                                    "src": "/images/windmill1.jpg",
                                     "alt": "An iamge of a bustling city.",
                                     "title": "About"
                                 }
@@ -262,7 +262,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/assets/images/Cells.png",
+                                    "src": "/images/Cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             }
@@ -270,7 +270,7 @@ module.exports = {
                         [
                             {
                                 "tile": {
-                                    "src": "/assets/images/city5.jpg",
+                                    "src": "/images/city5.jpg",
                                     "alt": "An iamge of a bustling city.",
                                     "title": "Health Policies & Tech"
                                 }
@@ -283,7 +283,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/assets/images/windmill1.jpg",
+                                    "src": "/images/windmill1.jpg",
                                     "alt": "Pictures of wind mills."
                                 }
                             },
@@ -295,7 +295,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/assets/images/Cells.png",
+                                    "src": "/images/Cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             },
@@ -313,7 +313,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/assets/images/Cells.png",
+                                    "src": "/images/Cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             },
@@ -327,7 +327,7 @@ module.exports = {
                         [
                             {
                                 "tile": {
-                                    "src": "/assets/images/city2.jpg",
+                                    "src": "/images/city2.jpg",
                                     "alt": "An iamge of a bustling city.",
                                     "title": "Connections"
                                 }
@@ -342,7 +342,7 @@ module.exports = {
                         [
                             {
                                 "tile": {
-                                    "src": "/assets/images/windmill3.jpg",
+                                    "src": "/images/windmill3.jpg",
                                     "alt": "An iamge of a bustling city.",
                                     "title": "References"
                                 }

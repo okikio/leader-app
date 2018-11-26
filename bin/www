@@ -6,7 +6,19 @@
 
 var app = require('../app');
 var debug = require('debug')('workspace:server');
-var http = require('http');
+// var http = require('http');
+var spdy = require('spdy');
+var path = require('path');
+var fs = require('fs');
+
+// HTTP2 Folder Path
+let http2 = path.normalize(__dirname + '/../') + 'http2/';
+
+// HTTP/2
+const options = {
+    key: fs.readFileSync(http2 + 'server.key'),
+    cert:  fs.readFileSync(http2 + 'server.crt')
+};
 
 /**
  * Get port from environment and store in Express.
@@ -19,7 +31,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = spdy.createServer(options, app); // http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

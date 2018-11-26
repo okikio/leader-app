@@ -1,14 +1,14 @@
 doctype html
 html(lang="en")
   head
-    link(rel='stylesheet' href='/assets/fonts/fonts.css')
-    link(rel='stylesheet' href='/css/main.min.css')
+    link(rel='stylesheet' href=getVersionedPath('/fonts/fonts.css'))
+    link(rel='stylesheet' href=getVersionedPath('/css/main.min.css'))
     
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    meta(http-equiv="Cache-Control" content="max-age=12090")
+    meta(http-equiv="Cache-Control" content="max-age=30 days")
     
     title= title
     
@@ -20,23 +20,23 @@ html(lang="en")
     meta(name="copyright" content="Copyright &copy; 2018 Okiki Ojo, Under a GNU Licence.")
     meta(name="author" content="Okiki Ojo")
     
-    link(rel="manifest" href="./manifest.json")
+    link(rel="manifest" href=getVersionedPath("./manifest.json"))
     meta(name='theme-color' content='#3B4BE6')
     meta(name='msapplication-navbutton-color' content='#3B4BE6')
     meta(name='apple-mobile-web-app-capable' content='yes')
     meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
     
     //if IE
-      link(rel='shortcut icon' href='./assets/images/logo/Science.ico)
+      link(rel='shortcut icon' href='./images/logo/Science.ico')
     
-    link(rel='icon' href='./assets/images/logo/Science.png' sizes='57x57' type='image/png')
-    link(rel='icon' href='./assets/images/logo/Science.svg' sizes='any' type='image/svg+xml')
-    link(rel='shortcut icon' href='./assets/images/logo/Science.png' type='image/x-icon')
-    link(rel='icon' href='./assets/images/logo/Science.png' sizes='16x16' type='image/png')
+    link(rel='icon' sizes='57x57' type='image/png' href=getVersionedPath('./images/logo/Science.png'))
+    link(rel='icon' sizes='any' type='image/svg+xml' href=getVersionedPath('./images/logo/Science.svg'))
+    link(rel='shortcut icon' type='image/x-icon' href=getVersionedPath('./images/logo/Science.png'))
+    link(rel='icon' sizes='16x16' type='image/png' href=getVersionedPath('./images/logo/Science.png'))
     link(content="https://app-science.herokuapp.com/" rel="canonical")
     if typeof css !== "undefined"
       each style in css
-        link(rel='stylesheet' href=style)
+        link(rel='stylesheet' href=getVersionedPath(style))
   body
     div.cover.load
       div.shade
@@ -45,8 +45,8 @@ html(lang="en")
     main.main
       block content
     include ../components/footer.pug
-    script(src='/js/jquery.min.js')
-    script(src='/js/main.min.js')
+    script(src=getVersionedPath('/js/jquery.min.js'))
+    script(src=getVersionedPath('/js/main.min.js'))
     if typeof js !== "undefined"
       each scripts in js
-        script(src=scripts)
+        script(src=getVersionedPath(scripts) defer)
