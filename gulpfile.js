@@ -30,9 +30,16 @@ function css() {
 
 function image() {
     var path_ = 'client/assets/images/*.';
-    return gulp.src([path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'])
+    var list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
+    gulp.src(list)
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'));
+        
+    path_ = "'client/assets/images/logo/*.";
+    list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
+    return gulp.src(list)
+        .pipe(imagemin())
+        .pipe(gulp.dest('public/images/logo'))
 }
 
 function font() {

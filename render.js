@@ -212,7 +212,7 @@ module.exports = {
                                 },
                                 {
                                     "img": {
-                                        "src": "/images/Cells.png",
+                                        "src": "/images/cells.png",
                                         "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                     }
                                 }
@@ -262,7 +262,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/images/Cells.png",
+                                    "src": "/images/cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             }
@@ -295,7 +295,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/images/Cells.png",
+                                    "src": "/images/cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             },
@@ -313,7 +313,7 @@ module.exports = {
                             },
                             {
                                 "img": {
-                                    "src": "/images/Cells.png",
+                                    "src": "/images/cells.png",
                                     "alt": "A Picture of Leukemia as it overwhelms normal cells."
                                 }
                             },

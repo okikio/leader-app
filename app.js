@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var _ = require("underscore");
 var compress = require('compression');
+var fs = require("fs");
 var staticify = require('staticify')(path.join(__dirname, 'public'));
 
 // List of routers 
@@ -17,6 +18,37 @@ var routes = require("./render.min")["route"];
 var routeList = routes["routes"];
 var errors = routes["errors"];
 
+var filesToCache = [
+        '/',
+        '/about',
+        '/health-policies-and-tech',
+        '/connections',
+        '/references'
+    ]
+    .concat(
+        map_cache("/images/logo"),
+        map_cache("/images"),
+        map_cache("/js"),
+        map_cache("/css"),
+        map_cache("/fonts"));
+
+function map_cache(path) {
+    var _path = __dirname + "/public" + (path + "");
+    const dirents = fs.readdirSync(_path, { withFileTypes: true });
+    const filesNames = dirents
+        .filter(function(dirent) { return !dirent.isDirectory(); })
+        .map(function(dirent) { return dirent.name; });
+    return _.map(filesNames, function(val) {
+        return path + "/" + val
+    });
+}
+
+var begin = ['CACHE MANIFEST', '# v1\n', '# Cache', 'CACHE:\n'].join("\n");
+var end = ['\n\nNETWORK:', '*\n', 'FALLBACK:', '/ /'].join("\n");
+fs.writeFile(__dirname + '/public/app.cache', (begin + filesToCache.join('\n') + end), function(err) {
+    if (err) { throw err; }
+});
+
 app.locals = {
     getVersionedPath: staticify.getVersionedPath
 };
@@ -25,10 +57,14 @@ app.locals = {
 app.use(compress());
 app.use(staticify.middleware);
 app.use(function(req, res, next) {
-    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg)$/, '/$1.$2');
+    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|.cache)$/, '/$1.$2');
     next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
+app.get("/app.cache", function(req, res) {
+    res.header("Content-Type", "text/cache-manifest");
+    res.end("CACHE MANIFEST");
+});
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));

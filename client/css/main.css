@@ -1001,7 +1001,8 @@ li.navbar-link-focus a:before {
 
 .layer-content-txt {
     line-height: 1.5;
-    font-size: 17px
+    font-size: 17px;
+    color: #3e3e3e;
 }
 
 .layer-img {

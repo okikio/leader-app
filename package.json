@@ -13,8 +13,6 @@
         "dev": "nodemon ./bin/www",
         "start": "node ./bin/www",
         "devstart": "nodemon ./bin/www",
-        "svg-folder": "svg-optimizer folder='./public/fonts'",
-        "svg-file": "svg-optimizer file='./example.svg'",
         "build": "node ./bin/build"
     },
     "repository": {
@@ -28,7 +26,7 @@
         "site"
     ],
     "engines": {
-        "node": "10.3.0"
+        "node": "11.2.0"
     },
     "author": "Okiki Ojo",
     "license": "GPL-3.0",
@@ -47,9 +45,7 @@
         "now": "11.4.1",
         "pug": "2.0.0-beta11",
         "pug-cli": "^1.0.0-alpha6",
-        "spdy": "^4.0.0",
         "staticify": "^3.1.0",
-        "svgo": "1.0.5",
         "underscore": "^1.9.1"
     },
     "devDependencies": {
