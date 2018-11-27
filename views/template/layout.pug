@@ -27,7 +27,7 @@ html(lang="en" manifest='/app.cache')
     meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
     
     <!--[if IE]-->
-      link(rel='shortcut icon' href='./images/logo/science.ico')
+      link(rel='shortcut icon' href=getVersionedPath('./images/logo/science.ico'))
     <!--<![endif]-->
     
     link(rel='icon' sizes='57x57' type='image/png' href=getVersionedPath('/images/logo/science.png'))
@@ -48,55 +48,7 @@ html(lang="en" manifest='/app.cache')
     include ../components/footer.pug
     script(src=getVersionedPath('/js/jquery.min.js'))
     script(src=getVersionedPath('/js/main.min.js'))
+    script(src='/js/cache.min.js')
     if typeof js !== "undefined"
       each scripts in js
         script(src=getVersionedPath(scripts) defer)
-    script.
-      var appCache = window.applicationCache, status;
-      if('serviceWorker' in navigator) { //  && navigator.serviceWorker.controller.state != "activated"
-        navigator.serviceWorker.register('worker.js')
-          .then(console.log)
-          .catch(console.error);
-      }
-      
-      appCache.update(); // Attempt to update the user's cache.
-      status = (function () {
-        switch (appCache.status) {
-          case appCache.UNCACHED: // UNCACHED == 0
-            return 'UNCACHED';
-            break;
-          case appCache.IDLE: // IDLE == 1
-            return 'IDLE';
-            break;
-          case appCache.CHECKING: // CHECKING == 2
-            return 'CHECKING';
-            break;
-          case appCache.DOWNLOADING: // DOWNLOADING == 3
-            return 'DOWNLOADING';
-            break;
-          case appCache.UPDATEREADY:  // UPDATEREADY == 4
-            appCache.swapCache();  // The fetch was successful, swap in the new cache.
-            return 'UPDATEREADY';
-            break;
-          case appCache.OBSOLETE: // OBSOLETE == 5
-            return 'OBSOLETE';
-            break;
-          default:
-            return 'UKNOWN CACHE STATUS';
-            break;
-        }
-      }) ();
-      
-      // Check if a new cache is available on page load.
-      window.addEventListener('load', function(e) {
-        window.applicationCache.addEventListener('updateready', function(e) {
-          if (status == 'UPDATEREADY') {
-            // Browser downloaded a new app cache.
-            if (confirm('A new version of this site is available. Load it?')) {
-              window.location.reload();
-            }
-          } else { // Manifest didn't changed. Nothing new to server.
-            console.log("No Cache Change.")
-          }
-        }, false);
-      }, false);

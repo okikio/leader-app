@@ -38,17 +38,21 @@ function map_cache(path) {
 }
 
 function fileList(dir, _path) {
+    let path_ = _path || "";
     return fs.readdirSync(dir).reduce(function(list, file) {
         var name = path.join(dir, file);
         var isDir = fs.statSync(name).isDirectory();
-        if (isDir) _path += file + "/";
-        return list.concat(isDir ? fileList(name, _path) : [_path + file]);
+        return list.concat(isDir ? fileList(name, _path + file + "/") : [_path + file]);
     }, []);
 }
 
-var begin = ['CACHE MANIFEST', '# v1\n', '# Cache', 'CACHE:\n'].join("\n");
+var begin = ['CACHE MANIFEST', '#v0.0.2 change this to force update\n', '# Cache', 'CACHE:\n'].join("\n");
 var end = ['\n\nNETWORK:', '*\n', 'FALLBACK:', '/ /'].join("\n");
 fs.writeFile(__dirname + '/public/app.cache', (begin + filesToCache.join('\n') + end), function(err) {
+    if (err) { throw err; }
+});
+
+fs.writeFile(__dirname + '/client/js/cachelist.js', "var filesToCache = " + JSON.stringify(filesToCache) + ";", function(err) {
     if (err) { throw err; }
 });
 

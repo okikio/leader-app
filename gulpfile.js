@@ -35,7 +35,7 @@ function image() {
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'));
         
-    path_ = "'client/assets/images/logo/*.";
+    path_ = "client/assets/images/logo/*.";
     list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
     return gulp.src(list)
         .pipe(imagemin())
