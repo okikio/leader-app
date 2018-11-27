@@ -1,3 +1,4 @@
+// V2
 var cacheName = 'app-science';
 var filesToCache = `
 /
@@ -5,6 +6,15 @@ var filesToCache = `
 /health-policies-and-tech
 /connections
 /references
+/images/benzene.png
+/images/cells.png
+/images/chemo.jpg
+/images/city.jpg
+/images/city2.jpg
+/images/city3.jpg
+/images/city4.jpg
+/images/city5.jpg
+/images/edison.jpg
 /images/logo/science-128.png
 /images/logo/science-256.png
 /images/logo/science-30.png
@@ -18,26 +28,17 @@ var filesToCache = `
 /images/logo/science.ico
 /images/logo/science.png
 /images/logo/science.svg
-/images/benzene.png
-/images/cells.png
-/images/chemo.jpg
-/images/city.jpg
-/images/city2.jpg
-/images/city3.jpg
-/images/city4.jpg
-/images/city5.jpg
-/images/edison.jpg
-/images/radioactive.png
-/images/solar-panel1.jpg
-/images/stars1.jpg
-/images/stars2.jpg
-/images/stars3.jpg
-/images/windmill1.jpg
-/images/windmill2.jpg
-/images/windmill3.jpg
-/images/windmill4.jpg
-/images/windmill5.jpg
-/images/xray.jpg
+/images/logo/radioactive.png
+/images/logo/solar-panel1.jpg
+/images/logo/stars1.jpg
+/images/logo/stars2.jpg
+/images/logo/stars3.jpg
+/images/logo/windmill1.jpg
+/images/logo/windmill2.jpg
+/images/logo/windmill3.jpg
+/images/logo/windmill4.jpg
+/images/logo/windmill5.jpg
+/images/logo/xray.jpg
 /js/jquery.min.js
 /js/main.min.js
 /css/error.min.css
