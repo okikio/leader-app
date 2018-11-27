@@ -26,7 +26,6 @@ var filesToCache = [
         '/references'
     ]
     .concat(
-        map_cache("/images/logo"),
         map_cache("/images"),
         map_cache("/js"),
         map_cache("/css"),
@@ -34,13 +33,17 @@ var filesToCache = [
 
 function map_cache(path) {
     var _path = __dirname + "/public" + (path + "");
-    const dirents = fs.readdirSync(_path, { withFileTypes: true });
-    const filesNames = dirents
-        .filter(function(dirent) { return !dirent.isDirectory(); })
-        .map(function(dirent) { return dirent.name; });
-    return _.map(filesNames, function(val) {
-        return path + "/" + val
-    });
+    const filesNames = fileList(_path, path + "/");
+    return filesNames
+}
+
+function fileList(dir, _path) {
+    return fs.readdirSync(dir).reduce(function(list, file) {
+        var name = path.join(dir, file);
+        var isDir = fs.statSync(name).isDirectory();
+        if (isDir) _path += file + "/";
+        return list.concat(isDir ? fileList(name, _path) : [_path + file]);
+    }, []);
 }
 
 var begin = ['CACHE MANIFEST', '# v1\n', '# Cache', 'CACHE:\n'].join("\n");
