@@ -50,7 +50,7 @@ $(document).ready(function() {
         $("div.cover").removeClass("load");
         $("a[href^='/']").click(function(e) {
             $("div.cover").addClass("load");
-        })
+        });
     }, 500);
     LoadImg.each(function(o, a) {
         var t = new Image,
