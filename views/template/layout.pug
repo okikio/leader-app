@@ -26,8 +26,9 @@ html(lang="en" manifest='/app.cache')
     meta(name='apple-mobile-web-app-capable' content='yes')
     meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
     
-    //if IE
-      link(rel='shortcut icon' href='./images/logo/Science.ico')
+    <!--[if IE]-->
+      link(rel='shortcut icon' href='./images/logo/science.ico')
+    <!--<![endif]-->
     
     link(rel='icon' sizes='57x57' type='image/png' href=getVersionedPath('/images/logo/science.png'))
     link(rel='icon' sizes='any' type='image/svg+xml' href=getVersionedPath('/images/logo/science.svg'))
