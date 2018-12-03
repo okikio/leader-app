@@ -1,10 +1,9 @@
 var _ = require("underscore");
 
 // Shared similarites between tab containers
-module.exports = function(/* ... args, ... */) { 
+module.exports = function() { 
     var args = _.toArray(arguments);
     return { 
-        "tabs": args.length == 0 ? ["About", "Health Policies & Tech", "Connections", "References"] : args
-        // ["About", "Leukemia", "How was the speed of light determined?", "References"]
+        "tabs": args.length == 0 ? ["About", "Contact"] : args
     }; 
 };

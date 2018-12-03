@@ -4,6 +4,7 @@ var fs = require("fs");
 var path = require('path');
 var util = require('util');
 var _ = require("underscore");
+var colors = require("colors");
 
 // Stringify
 let stringify = function(obj) {
@@ -31,17 +32,16 @@ let render = function(from, to) {
             var file = require(root + from + dir);
             var __dir = dir.replace(".js", "");
             content[__dir] = {};
-            for (var i in file)
-                content[__dir][i] = file[i];
+            for (var i in file) content[__dir][i] = file[i];
 
             // Write the contents of each component to it's compiled counter-part 
             fs.writeFile(root + to + '.js', "module.exports = " + stringify(content) + ";", function(err) {
                 if (err) { throw err; }
             });
-            console.log(from + dir + ' - Read operation complete.');
+            console.log((from + dir).red + ' - Read operation complete.');
         });
     });
 };
 
 // Folders
-render('routes/', 'render');
+render('routes/', 'data/render');

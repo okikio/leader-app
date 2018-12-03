@@ -3,6 +3,6 @@ var pick = require("../util/pick");
 
 // Shared similarites between alt containers
 module.exports = function(alt) {
-    var value = { "alt":  pick(alt, "An iamge of a bustling city.") };
+    var value = { "alt":  pick(alt, "An iamge of a ..") };
     return _.extend({}, value);
 };

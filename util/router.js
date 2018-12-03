@@ -1,28 +1,25 @@
 var express = require('express');
 var _ = require("underscore");
-
 var pick = require("../util/pick");
-var routers = require("../render.min")["route"]["routers"];
 
 // Parse the values from the routes Object
 var Parser = function(val, key, router) {
-    if (_.isArray(val)) {
-        var route = val[0], path = val[1];
-        if (_.isFunction(route)) {
-            return router.get('/' + pick(path, ""), route);
-        }
-        else if (_.isObject(route)) {
+    try {
+        if (_.isArray(val)) {
+            var route = val[0], path = val[1];
+            if (_.isFunction(route)) {
+                return router.get('/', route);
+            } else if (_.isObject(route)) {
+                return router.get('/', function(req, res, next) {
+                    res.render(pick(path, "template/layout"), route);
+                });
+            }
+        } else if (_.isObject(val)) {
             return router.get('/', function(req, res, next) {
-                res.render(pick(path, ""), route);
+                res.render("template/layout", val);
             });
         }
-    } else if (_.isFunction(val)) {
-        return router.get('/', val);
-    } else if (_.isObject(val)) {
-        return router.get('/', function(req, res, next) {
-            res.render(key, val);
-        });
-    } else { throw new Error("Route is not formated properly."); }
+    } catch (e) { throw e; }
 };
 
 // Converts the values from the routes to an Object full of routes `{ key: route }``
@@ -39,8 +36,9 @@ var ParseRoutes = function(list) {
     }, {});
 };
 
-module.exports = function(route) {
-    return ParseRoutes(routers) [route] ();
+module.exports = function(routers, route) {
+    return ParseRoutes(routers)[route]();
 };
 
-_.extend(module.exports, { ParseRoutes: ParseRoutes, Parser: Parser })
+module.exports.ParseRoutes = ParseRoutes;
+module.exports.Parser = Parser;

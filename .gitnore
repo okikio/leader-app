@@ -7,7 +7,7 @@ yarn-error.log*
 push-git*
 
 # Git Pushing
-push-git.txt
+/git-page
 
 # Heroku Test
 /node_modules
