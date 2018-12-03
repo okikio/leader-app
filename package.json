@@ -14,7 +14,7 @@
     },
     "scripts": {
         "dev": "nodemon ./bin/www",
-        "pro": "forever ./bin/www",
+        "pro": "forever start ./bin/www",
         "start": "node ./bin/www",
         "build": "node ./bin/build",
         "git-page": "node ./bin/git-page",

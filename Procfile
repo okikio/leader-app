@@ -1,1 +1,1 @@
-web: forever start
+web: npm run pro
