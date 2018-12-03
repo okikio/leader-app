@@ -14,7 +14,6 @@
     },
     "scripts": {
         "dev": "nodemon ./bin/www",
-        "pro": "forever start ./bin/www",
         "start": "node ./bin/www",
         "build": "node ./bin/build",
         "git-page": "node ./bin/git-page",
@@ -47,7 +46,6 @@
         "debug": "~2.6.9",
         "ejs": "^2.6.1",
         "express": "4.16.3",
-        "forever": "^0.15.3",
         "heroku": "^7.18.10",
         "http-errors": "1.6.3",
         "morgan": "^1.9.1",
