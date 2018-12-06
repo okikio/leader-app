@@ -53,7 +53,7 @@ function font() {
         .pipe(gulp.dest('public/fonts'));
      
     return gulp.src(path_ + 'svg')
-        // .pipe(imagemin())
+        .pipe(imagemin())
         .pipe(gulp.dest('public/fonts'));
         
 }
