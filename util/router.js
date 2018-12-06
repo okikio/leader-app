@@ -11,12 +11,12 @@ var Parser = function(val, key, router) {
                 return router.get('/', route);
             } else if (_.isObject(route)) {
                 return router.get('/', function(req, res, next) {
-                    res.render(pick(path, "template/layout"), route);
+                    res.render(pick(path, "template/page"), route);
                 });
             }
         } else if (_.isObject(val)) {
             return router.get('/', function(req, res, next) {
-                res.render("template/layout", val);
+                res.render("template/page", val);
             });
         }
     } catch (e) { throw e; }

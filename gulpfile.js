@@ -29,9 +29,9 @@ function css() {
 }
 
 function image() {
-    var path_ = 'client/images/*.';
+    /*var path_ = 'client/images/*.';
     var list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
-    gulp.src(list)
+    return gulp.src(list)
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'));
         
@@ -39,7 +39,7 @@ function image() {
     list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
     return gulp.src(list)
         .pipe(imagemin())
-        .pipe(gulp.dest('public/images/logo'))
+        .pipe(gulp.dest('public/images/logo'))*/
 }
 
 function font() {
@@ -53,7 +53,7 @@ function font() {
         .pipe(gulp.dest('public/fonts'));
      
     return gulp.src(path_ + 'svg')
-        .pipe(imagemin())
+        // .pipe(imagemin())
         .pipe(gulp.dest('public/fonts'));
         
 }

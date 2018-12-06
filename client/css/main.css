@@ -511,7 +511,7 @@ li.navbar-link-focus a {
 }
 
 /* -- Margin -- */
-.]in-horz {
+.layout-margin-horz {
     margin-right: 25px;
     margin-left: 25px;
 }
