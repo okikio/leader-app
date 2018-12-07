@@ -33,13 +33,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Set route to routers 
+/*
 _.each(routeList, function(route, path, obj) {
     if (_.isFunction(routers[route])) {
         routers[route](app.route(route));
     } else {
         app.use(path, Router(routers, route));
     }
-});
+});*/
+var url = require("url")
+app.get("/", function (req, res) {
+    res.redirect(url.format({
+        pathname: "https://s.codepen.io/whitelightG/debug/XyGpbq/XxMVwaeLWRWr"
+    }));
+})
 
 // 404 and forward to error handler
 app.use(function(req, res, next) {
