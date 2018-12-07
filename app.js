@@ -44,7 +44,7 @@ _.each(routeList, function(route, path, obj) {
 var url = require("url")
 app.get("/", function (req, res) {
     res.redirect(url.format({
-        pathname: "https://s.codepen.io/whitelightG/debug/XyGpbq/XxMVwaeLWRWr"
+        pathname: "https://s.codepen.io/whitelightG/debug/XyGpbq/vWMRwaLPvqNr"
     }));
 })
 
