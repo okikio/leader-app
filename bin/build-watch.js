@@ -7,7 +7,7 @@ var watch = require("node-watch");
 var colors = require("colors");
 require('log-timestamp');
 
-const watchFile = ["routes/", "containers/"];
+const watchFile = ["routes/", "containers/", "client/"];
 const watchFileColor = watchFile.reduce(function(acc, cur, i) {
     return acc + cur.yellow + (i < watchFile.length - 1 ? ('\"'.yellow + ', ' + '\"'.yellow) : "\"".yellow);
 }, "\"".yellow);

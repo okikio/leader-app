@@ -6,12 +6,13 @@ header.header
       section.navbar-spacer
       section.navbar-main
         ul.navbar-list.navbar-list-hide
-            each val in tabs
-              li.navbar-link
-                a(href='/')= val
+          each val in tabs
+            li.navbar-link
+              a(link=val.toLowerCase())= val
+          // li.navbar-link
+            a(link='works cited') Works Cited
       section.navbar-foot
         a.icon-btn.navbar-backup
           i.icon.material-icons expand_less
         a.icon-btn.navbar-menu
-          svg.material-icons.icon(width='24px', height='24px')
-            path(d='M3,8 v2 h18 V8 H3 z M3,16 h18 v-2 H3 V18 z')
+          i.material-icons.icon menu

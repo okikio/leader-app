@@ -2,8 +2,13 @@ module.exports = {
     "error": {
         "title": "Leaders",
         "tabs": [
-            "About",
-            "Contact"
+            "Intro",
+            "Technical",
+            "Psychology",
+            "Social",
+            "Personal",
+            "Education",
+            "Conclusion"
         ],
         "tab_focus": "Focus",
         "hero": {
@@ -20,8 +25,13 @@ module.exports = {
         "index": {
             "title": "Leaders",
             "tabs": [
-                "About",
-                "Contact"
+                "Intro",
+                "Technical",
+                "Psychology",
+                "Social",
+                "Personal",
+                "Education",
+                "Conclusion"
             ],
             "tab_focus": "Focus",
             "hero": {
@@ -37,8 +47,13 @@ module.exports = {
         "about": {
             "title": "About",
             "tabs": [
-                "About",
-                "Contact"
+                "Intro",
+                "Technical",
+                "Psychology",
+                "Social",
+                "Personal",
+                "Education",
+                "Conclusion"
             ],
             "tab_focus": "Focus",
             "hero": {
