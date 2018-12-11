@@ -4,8 +4,8 @@
     "description": "A website containing Leadership projects. It's is one of a series of websites built by Okiki Ojo for school subjects.",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#ff3366",
-    "theme_color": "#ff3366",
+    "background_color": "#ff0064",
+    "theme_color": "#ff0064",
     "icons": [
         {
             "src": "./images/icon/icon-16.png",
