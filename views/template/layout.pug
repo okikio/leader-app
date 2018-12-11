@@ -1,6 +1,5 @@
 doctype html
-html(lang="en") 
-  //  manifest='/app.cache'
+html(lang="en" manifest='/app.cache') 
   head
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
@@ -8,13 +7,13 @@ html(lang="en")
     meta(http-equiv="Cache-Control" content="max-age=30 days")
     meta(charset='UTF-8')
     
-    link(rel='stylesheet' async href='/fonts/fonts.min.css')
-    link(rel='stylesheet' href='/css/main.min.css')
+    link(rel='stylesheet' async href=getVersionedPath('/fonts/fonts.min.css'))
+    link(rel='stylesheet' href=getVersionedPath('/css/main.min.css'))
     
     title= title
     
     meta(content='website', property='og:type')
-    meta(content='Science', property='og:title')
+    meta(content='Leader', property='og:title')
     meta(content="A website containing Leadership projects. It's is one of a series of websites built by Okiki Ojo for school subjects.", property='og:description')
     meta(name='description', content="A website containing Leadership projects. It's is one of a series of websites built by Okiki Ojo for school subjects.")
     meta(name='keywords', content='Leader, App, Projects, Okiki, Ojo')
@@ -22,24 +21,25 @@ html(lang="en")
     meta(name='author', content='Okiki Ojo')
 
     
-    // link(rel="manifest" href="./manifest.json")
-    meta(name='theme-color' content='#3B4BE6')
-    meta(name='msapplication-navbutton-color' content='#3B4BE6')
+    link(rel="manifest" href=getVersionedPath("./manifest.json"))
+    meta(name='theme-color' content='#ff3366')
+    meta(name='msapplication-navbutton-color' content='#ff3366')
     meta(name='apple-mobile-web-app-capable' content='yes')
-    meta(name='apple-mobile-web-app-status-bar-style' content='#3B4BE6')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#ff3366')
     
     <!--[if IE]-->
-      // link(rel='shortcut icon' href='./images/logo/science.ico')
+      link(rel='shortcut icon' href=getVersionedPath('/images/icon/icon.ico'))
     <!--<![endif]-->
     
-    // link(rel='icon' sizes='57x57' type='image/png' href='/images/logo/science.png')
-    // link(rel='icon' sizes='any' type='image/svg+xml' href='/images/logo/science.svg')
-    // link(rel='shortcut icon' type='image/x-icon' href='/images/logo/science.png')
-    // link(rel='icon' sizes='16x16' type='image/png' href='/images/logo/science.png')
+    link(rel='icon' sizes='512x512' type='image/png' href=getVersionedPath('/images/icon/icon-512.png'))
+    link(rel='icon' sizes='57x57' type='image/png' href=getVersionedPath('/images/icon/icon-57.png'))
+    link(rel='icon' sizes='16x16' type='image/png' href=getVersionedPath('/images/icon/icon-16.png'))
+    link(rel='icon' sizes='any' type='image/svg+xml' href=getVersionedPath('/images/icon/icon.svg'))
+    link(rel='shortcut icon' type='image/x-icon' href=getVersionedPath('/images/icon/icon-512.png'))
     link(content="https://app-leader.herokuapp.com/" rel="canonical")
     if typeof css !== "undefined"
       each style in css
-        link(rel='stylesheet' href=style)
+        link(rel='stylesheet' href=getVersionedPath(style))
   body
     div.cover.load
       div.shade
@@ -48,9 +48,9 @@ html(lang="en")
     main.main.layer-white
       block content
     include ../components/footer.pug
-    script(src='/js/jquery.min.js')
-    script(src='/js/main.min.js')
-    // script(src='/js/cache.min.js')
+    script(src=getVersionedPath('/js/jquery.min.js'))
+    script(src=getVersionedPath('/js/main.min.js'))
+    script(src='/js/cache.min.js' defer)
     if typeof js !== "undefined"
       each scripts in js
-        script(src=scripts defer)
+        script(src=getVersionedPath(scripts) defer)

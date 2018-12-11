@@ -1,59 +1,24 @@
 {
-    "name": "Science",
-    "short_name": "Leukemia",
-    "description": "A website containing Science projects. It's is one of a series of websites built by Okiki Ojo for school subjects.",
+    "name": "Curiosity",
+    "short_name": "Leaders",
+    "description": "A website containing Leadership projects. It's is one of a series of websites built by Okiki Ojo for school subjects.",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#3B4BE6",
-    "theme_color": "#3B4BE6",
+    "background_color": "#ff3366",
+    "theme_color": "#ff3366",
     "icons": [
         {
-            "src": "./images/logo/science-30.png",
-            "sizes": "30x30",
+            "src": "./images/icon/icon-16.png",
+            "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "./images/logo/science-32.png",
-            "sizes": "32x32",
+            "src": "./images/icon/icon-57.png",
+            "sizes": "57x57",
             "type": "image/png"
         },
         {
-            "src": "./images/logo/science-48.png",
-            "sizes": "48x48",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-60.png",
-            "sizes": "60x60",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-72.png",
-            "sizes": "72",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-80.png",
-            "sizes": "80x80",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-96.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-128.png",
-            "sizes": "128x128",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/logo/science-512.png",
+            "src": "./images/icon/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

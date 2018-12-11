@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "MaterialIcons-Regular";
+    src: url("MaterialIconMod.eot");
+    src: url("MaterialIconMod.eot?#iefix") format("embedded-opentype"),
+         url("MaterialIconMod.woff2") format("woff2"),
+         url("MaterialIconMod.woff") format("woff"),
+         url("MaterialIconMod.ttf") format("ttf"),
+         url("MaterialIconMod.svg#MaterialIcons-Regular") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

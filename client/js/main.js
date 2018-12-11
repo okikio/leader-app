@@ -172,14 +172,12 @@ HeroImg.each(function(i) {
         var o = $(t);
         o.attr("alt", _alt),
         o.attr("class", _class);
-        // console.log(t);
         a.after(t);
         $(a).remove();
     },
     t.onerror = function(o) {
         console.log("One of the images didn't load: " + o)
     };
-    // console.log(t)
 });
 NavBackUp.on("click", function() {
     Body.animate({ scrollTop: 0 }, 800, Scroll);
@@ -202,9 +200,9 @@ $(document).ready(function() {
     });
     setTimeout(function() {
         $("div.cover").removeClass("load");
-        $("a[href^='/']").click(function(e) {
-            // $("div.cover").addClass("load");
+        $("a[href|='/']").click(function(e) {
+            $("div.cover").addClass("load");
         });
     }, 500);
-    // ImgLoad();
+    ImgLoad();
 });

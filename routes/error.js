@@ -1,4 +1,5 @@
 var _ = require("underscore");
 var page = require("../containers/page");
 var title = require("../containers/title");
-module.exports = page(title("Leaders"));
+var tabs = require("../containers/tabs");
+module.exports = page(title("Not found! - Leaders", tabs(" ")));

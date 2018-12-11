@@ -26,7 +26,7 @@ var Parser = function(val, key, router) {
 var ParseRoutes = function(list) {
     return _.reduce(list, function(obj, val, key) {
         var router = express.Router();
-        if (!_.isUndefined(val)) {
+        if (typeof val != "undefined") {
             obj[key] = function() {
                 Parser(val, key, router);
                 return router;

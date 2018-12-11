@@ -2,60 +2,66 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCSS = require('gulp-csso');
-var imagemin = require('gulp-imagemin');
+var imageop = require('gulp-imagemin');
+var fontGen = require('gulp-fontgen');
+var concat = require('gulp-concat-css');
+var colors = require("colors");
 
-function render(cb) {
+function render(done) {
     return gulp.src('data/render.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('data'));
+        .pipe(gulp.dest('data')),
+        console.log("Finished ... Render".red), done();
 }
 
-function js() {
-    gulp.src(['client/js/*.js', '!client/js/*.min.js'])
+function js(done) {
+    return gulp.src(['client/js/*.js', '!client/js/*.min.js'])
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('public/js')),
 
-    return gulp.src('client/js/*.min.js')
-        .pipe(gulp.dest('public/js'));
+        gulp.src('client/js/*.min.js')
+        .pipe(gulp.dest('public/js')),
+        console.log("Finished ... JS".red), done();
 }
 
-function css() {
+function css(done) {
     return gulp.src('client/css/*.css')
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('public/css')),
+        console.log("Finished ... CSS".red), done();
 }
 
-function image() {
-    /*var path_ = 'client/images/*.';
-    var list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
-    return gulp.src(list)
-        .pipe(imagemin())
-        .pipe(gulp.dest('public/images'));
-        
-    path_ = "client/images/logo/*.";
-    list = [path_ + 'jpg', path_ + 'png', path_ + 'svg', path_ + 'ico', path_ + 'jpeg'];
-    return gulp.src(list)
-        .pipe(imagemin())
-        .pipe(gulp.dest('public/images/logo'))*/
+function image(done) {
+    return gulp.src('client/images/*')
+        .pipe(imageop())
+        .pipe(gulp.dest('public/images')),
+        console.log("Finished ... Image".red), done();
 }
 
-function font() {
-    var path_ = 'client/fonts/*.';
-    gulp.src(path_ + 'css')
+function font(done) {
+    return gulp.src("client/fonts/*.{ttf,otf}")
+        .pipe(fontGen({
+            dest: "client/fonts"
+        }))
+
+        .pipe(fontGen({
+            dest: "public/fonts"
+        })),
+
+        gulp.src(['client/fonts/*.css', '!client/fonts/fonts.css'])
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/fonts'));
-    
-    gulp.src(['client/fonts/*', '!' + path_ + 'css', '!' + path_ + 'svg'])
-        .pipe(gulp.dest('public/fonts'));
-     
-    return gulp.src(path_ + 'svg')
-        .pipe(imagemin())
-        .pipe(gulp.dest('public/fonts'));
+        .pipe(gulp.dest('public/fonts')),
         
+        gulp.src('client/fonts/*.css')
+        .pipe(concat('fonts.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('public/fonts')),
+        console.log("Finished ... Font".red),
+        done();
 }
 
 gulp.task('render', render);
@@ -64,4 +70,6 @@ gulp.task('font', font);
 gulp.task('css', css);
 gulp.task('js', js);
 
-gulp.task('default', function(cb) { font(); image(); js(); css(); render(cb); });
+gulp.task('default', function(done) {
+    return image(), js(), css(), render(), font(), done();
+});

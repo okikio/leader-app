@@ -1,8 +1,18 @@
 extends layout
 
 block content
-  section.layout-contain.center-board.layout-padding-vert.layout-margin-vert
-    h1.color-blue= title
-    h4= details
-    h5
-      a.color-blue(href='/') Go to our Homepage
+  section.layer-content
+    section.layer-hero-shadow
+      section.layer-hero
+        .layer-hero-img-div.layer-hero-img(data-src='/images/spiral-pattern.jpg' alt='An iamge of a spiral pattern.')
+        .layer-hero-overlay
+        .layer-hero-content
+          h2.layer-hero-type 404
+          h1.layer-hero-title.style-uppercase Oops!
+  section.layer-content.layer-white.sidebar-move
+    section.layout-contain
+      section.layer
+        section.layout-padding-vert-top.layout-padding-horz
+          h4.layer-title Sorry, the page you were looking for doesn't exist.
+          span.layer-content-txt
+            a.color-blue(href='/') Go to our Homepage

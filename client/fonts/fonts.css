@@ -7,30 +7,6 @@
 }
 
 @font-face {
-    font-family: "PermanentMarker-Regular";
-    src: url(./PermanentMarker-Regular.eot);
-    src: url(./PermanentMarker-Regular.eot?#iefix) format("embedded-opentype"), url(./PermanentMarker-Regular.otf) format("opentype"), url(./PermanentMarker-Regular.svg) format("svg"), url(./PermanentMarker-Regular.ttf) format("truetype"), url(./PermanentMarker-Regular.woff) format("woff"), url(./PermanentMarker-Regular.woff2) format("woff2");
-    font-weight: 400;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "PermanentMarker";
-    src: url(./PermanentMarker-Regular.eot);
-    src: url(./PermanentMarker-Regular.eot?#iefix) format("embedded-opentype"), url(./PermanentMarker-Regular.otf) format("opentype"), url(./PermanentMarker-Regular.svg) format("svg"), url(./PermanentMarker-Regular.ttf) format("truetype"), url(./PermanentMarker-Regular.woff) format("woff"), url(./PermanentMarker-Regular.woff2) format("woff2");
-    font-weight: 400;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "Permanent Marker";
-    src: url(./PermanentMarker-Regular.eot);
-    src: url(./PermanentMarker-Regular.eot?#iefix) format("embedded-opentype"), url(./PermanentMarker-Regular.otf) format("opentype"), url(./PermanentMarker-Regular.svg) format("svg"), url(./PermanentMarker-Regular.ttf) format("truetype"), url(./PermanentMarker-Regular.woff) format("woff"), url(./PermanentMarker-Regular.woff2) format("woff2");
-    font-weight: 400;
-    font-style: normal
-}
-
-@font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
@@ -70,20 +46,144 @@
     font-style: normal
 }
 
-.material-icons {
-    font-family: 'Material Icons';
+/* latin-ext */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
     font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(./OpenSans-Italic.eot);
+    src: url(./OpenSans-Italic.eot?#iefix) format("embedded-opentype"), url(./OpenSans-Italic.otf) format("opentype"), url(./OpenSans-Italic.svg) format("svg"), url(./OpenSans-Italic.ttf) format("truetype"), url(./OpenSans-Italic.woff) format("woff"), url(./OpenSans-Italic.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(./OpenSans-Italic.eot);
+    src: url(./OpenSans-Italic.eot?#iefix) format("embedded-opentype"), url(./OpenSans-Italic.otf) format("opentype"), url(./OpenSans-Italic.svg) format("svg"), url(./OpenSans-Italic.ttf) format("truetype"), url(./OpenSans-Italic.woff) format("woff"), url(./OpenSans-Italic.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Open Sans';
     font-style: normal;
-    font-size: 24px;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(./OpenSans-Regular.eot);
+    src: url(./OpenSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./OpenSans-Regular.otf) format("opentype"), url(./OpenSans-Regular.svg) format("svg"), url(./OpenSans-Regular.ttf) format("truetype"), url(./OpenSans-Regular.woff) format("woff"), url(./OpenSans-Regular.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(./OpenSans-Regular.eot);
+    src: url(./OpenSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./OpenSans-Regular.otf) format("opentype"), url(./OpenSans-Regular.svg) format("svg"), url(./OpenSans-Regular.ttf) format("truetype"), url(./OpenSans-Regular.woff) format("woff"), url(./OpenSans-Regular.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(./OpenSans-Bold.eot);
+    src: url(./OpenSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(./OpenSans-Bold.otf) format("opentype"), url(./OpenSans-Bold.svg) format("svg"), url(./OpenSans-Bold.ttf) format("truetype"), url(./OpenSans-Bold.woff) format("woff"), url(./OpenSans-Bold.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(./OpenSans-Bold.eot);
+    src: url(./OpenSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(./OpenSans-Bold.otf) format("opentype"), url(./OpenSans-Bold.svg) format("svg"), url(./OpenSans-Bold.ttf) format("truetype"), url(./OpenSans-Bold.woff) format("woff"), url(./OpenSans-Bold.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(./RobotoSlab-Regular.eot);
+    src: url(./RobotoSlab-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./RobotoSlab-Regular.otf) format("opentype"), url(./RobotoSlab-Regular.svg) format("svg"), url(./RobotoSlab-Regular.ttf) format("truetype"), url(./RobotoSlab-Regular.woff) format("woff"), url(./RobotoSlab-Regular.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(./RobotoSlab-Regular.eot);
+    src: url(./RobotoSlab-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./RobotoSlab-Regular.otf) format("opentype"), url(./RobotoSlab-Regular.svg) format("svg"), url(./RobotoSlab-Regular.ttf) format("truetype"), url(./RobotoSlab-Regular.woff) format("woff"), url(./RobotoSlab-Regular.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(./Ubuntu-Regular.eot);
+    src: url(./Ubuntu-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./Ubuntu-Regular.otf) format("opentype"), url(./Ubuntu-Regular.svg) format("svg"), url(./Ubuntu-Regular.ttf) format("truetype"), url(./Ubuntu-Regular.woff) format("woff"), url(./Ubuntu-Regular.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(./Ubuntu-Regular.eot);
+    src: url(./Ubuntu-Regular.eot?#iefix) format("embedded-opentype"),
+    url(./Ubuntu-Regular.otf) format("opentype"), url(./Ubuntu-Regular.svg) format("svg"), url(./Ubuntu-Regular.ttf) format("truetype"), url(./Ubuntu-Regular.woff) format("woff"), url(./Ubuntu-Regular.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.material-icons {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: liga
+    font-feature-settings: 'liga';
+    font-family: "Material Icons";
+    vertical-align: middle;
+    letter-spacing: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap;
+    font-weight: normal;
+    position: relative;
+    font-size: inherit;
+    font-style: normal;
+    word-wrap: normal;
+    line-height: 1;
+    direction: ltr;
+    height: 1em;
+    width: 1em;
 }
