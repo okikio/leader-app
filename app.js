@@ -42,7 +42,7 @@ app.get("/app.cache", function(req, res) {
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('view cache', true);
+// app.set('view cache', true);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -53,8 +53,7 @@ app.use(cookieParser());
 _.each(routeList, function(route, path, obj) {
     if (_.isFunction(routers[route])) {
         routers[route](app.route(route));
-    }
-    else {
+    } else {
         app.use(path, Router(routers, route));
     }
 });

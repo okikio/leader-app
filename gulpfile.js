@@ -41,17 +41,19 @@ function image(done) {
         console.log("Finished ... Image".red), done();
 }
 
-function font(done) {
-    
-        /*gulp.src("client/fonts/*.{ttf,otf}")
+function fontgen(done) {
+    return gulp.src("client/fonts/*.{ttf,otf}")
         .pipe(fontGen({
-            dest: "client/fonts"
+            dest: "client/fonts/"
         }))
 
         .pipe(fontGen({
-            dest: "public/fonts"
+            dest: "public/fonts/"
         })),
-*/
+        done();
+}
+
+function font(done) {
     return gulp.src(['client/fonts/*.css', '!client/fonts/fonts.css'])
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
@@ -65,6 +67,7 @@ function font(done) {
         done();
 }
 
+gulp.task('fontgen', fontgen);
 gulp.task('render', render);
 gulp.task('image', image);
 gulp.task('font', font);
