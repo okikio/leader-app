@@ -30,7 +30,7 @@ app.locals = {
 app.use(compress());
 app.use(staticify.middleware);
 app.use(function(req, res, next) {
-    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|.cache|.woff|.woff2|.ttf|.eot)$/, '/$1.$2');
+    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|cache)$/, '/$1.$2');
     next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
@@ -42,7 +42,7 @@ app.get("/app.cache", function(req, res) {
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-// app.set('view cache', true);
+app.set('view cache', true);
 
 app.use(logger('dev'));
 app.use(express.json());

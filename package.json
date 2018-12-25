@@ -20,7 +20,7 @@
         "build-watch": "node ./bin/build-watch"
     },
     "engines": {
-        "node": "11.3.0"
+        "node": "11.5.0"
     },
     "repository": {
         "type": "git",

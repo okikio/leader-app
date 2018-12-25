@@ -35,26 +35,28 @@ function css(done) {
 }
 
 function image(done) {
-    return gulp.src('client/images/*')
+    return gulp.src('client/images/*.{png,svg}') // jpeg,jpg,,svg
         .pipe(imageop())
-        .pipe(gulp.dest('public/images')),
+        .pipe(gulp.dest('client/images')),
+        
+        gulp.src('client/images/*')
+        .pipe(gulp.dest('client/images')),
         console.log("Finished ... Image".red), done();
 }
 
 function fontgen(done) {
-    return gulp.src("client/fonts/*.{ttf,otf}")
+    return gulp.src("./client/fonts/**/*.{ttf,otf}")
         .pipe(fontGen({
-            dest: "client/fonts/"
+            dest: "client/fonts"
         }))
-
         .pipe(fontGen({
-            dest: "public/fonts/"
+            dest: "public/fonts"
         })),
         done();
 }
 
 function font(done) {
-    return gulp.src(['client/fonts/*.css', '!client/fonts/fonts.css'])
+    return gulp.src(['client/fonts/*.css', '!client/fonts/font.css', '!client/fonts/*.min.css'])
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('public/fonts')),
@@ -75,5 +77,5 @@ gulp.task('css', css);
 gulp.task('js', js);
 
 gulp.task('default', function(done) {
-    return image(), js(), css(), render(), font(), done();
+    return image(done), js(done), css(done), render(done), font(done), done();
 });
