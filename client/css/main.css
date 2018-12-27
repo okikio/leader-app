@@ -494,9 +494,9 @@ ul.navbar-list {
 }
 
 li.navbar-link a {
-	font-family: "Helvetica Neue", "Ubuntu", "Roboto Slab", sans-serif;
+	font-family: "Helvetica", "Ubuntu", "Roboto Slab", sans-serif;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     display: block;
     color: #727276;
