@@ -519,7 +519,7 @@ ul.navbar-list {
 li.navbar-link a {
 	font-family: "Ubuntu", "Roboto Slab", sans-serif;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     display: block;
     color: #727276;
@@ -1146,7 +1146,7 @@ load-img.layer-hero-img {
 }
 
 .layer-hero-title {
-    font-family: "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
