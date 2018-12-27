@@ -18,6 +18,7 @@ watch(watchFile, { recursive: true }, function(evt, name) {
         shell.exec("compile");
         shell.exec("gulp js"); 
         shell.exec("gulp css"); 
+        shell.exec("gulp font"); 
         shell.exec("gulp render"); 
     }
 });
