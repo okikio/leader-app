@@ -47,21 +47,13 @@ function image(done) {
 function fontgen(done) {
     return gulp.src("./client/fonts/**/*.{ttf,otf}")
         .pipe(fontGen({
-            dest: "client/fonts"
-        }))
-        .pipe(fontGen({
-            dest: "public/fonts"
+            dest: "public/fonts/"
         })),
         done();
 }
 
 function font(done) {
-    return gulp.src(['client/fonts/*.css', '!client/fonts/font.css', '!client/fonts/*.min.css'])
-        .pipe(minifyCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/fonts')),
-        
-        gulp.src('client/fonts/*.css')
+    return gulp.src(['public/fonts/*.css', '!public/fonts/fonts.min.css'])
         .pipe(concat('fonts.min.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('public/fonts')),
