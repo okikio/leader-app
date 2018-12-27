@@ -2,15 +2,15 @@ header.header
   nav.navbar.navbar-fixed
     article.navbar-layout
       section.navbar-head
-        a.navbar-title(href='') Leaders
+        a.navbar-title(href='/') 
+          img.navbar-logo(src='/images/icon/icon.svg', alt='The logo of the Website', title="Leaders")
       section.navbar-spacer
       section.navbar-main
-        ul.navbar-list.navbar-list-hide
+        ul.navbar-list.navbar-list-hide.navbar-spacer
           each val in tabs
             li.navbar-link
-              a(link=val.toLowerCase())= val
-          // li.navbar-link
-            a(link='works cited') Works Cited
+              a(link=val.toLowerCase())= val      
+      section.navbar-spacer
       section.navbar-foot
         a.icon-btn.navbar-backup
           i.icon.material-icons expand_less

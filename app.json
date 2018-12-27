@@ -1,10 +1,8 @@
 {
-  "name": "science-app",
-  "description": "The app for my Science ISU.",
-  "scripts": {
-  },
-  "env": {
-  },
+  "name": "leader-app",
+  "description": "A web app for my leadership class.",
+  "scripts": {},
+  "env": {},
   "formation": {
     "web": {
       "quantity": 1
@@ -13,9 +11,7 @@
   "addons": [
 
   ],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ]
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }]
 }

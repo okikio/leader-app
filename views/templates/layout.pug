@@ -1,5 +1,5 @@
 doctype html
-html(lang="en" manifest='/app.cache') 
+html(lang="en" manifest='/app.cache')
   head
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
@@ -7,7 +7,7 @@ html(lang="en" manifest='/app.cache')
     meta(http-equiv="Cache-Control" content="max-age=30 days")
     meta(charset='UTF-8')
     
-    link(rel='stylesheet' href=getVersionedPath('/fonts/fonts.min.css'))
+    link(rel='stylesheet' async href=getVersionedPath('/fonts/fonts.min.css'))
     link(rel='stylesheet' href=getVersionedPath('/css/main.min.css'))
     
     title= title
@@ -21,7 +21,7 @@ html(lang="en" manifest='/app.cache')
     meta(name='author', content='Okiki Ojo')
 
     
-    link(rel="manifest" href="./manifest.json")
+    link(rel="manifest" href=getVersionedPath("/manifest.json"))
     meta(name='theme-color' content='#ff0064')
     meta(name='msapplication-navbutton-color' content='#ff0064')
     meta(name='apple-mobile-web-app-capable' content='yes')
@@ -32,14 +32,20 @@ html(lang="en" manifest='/app.cache')
     <!--<![endif]-->
     
     link(rel='icon' sizes='512x512' type='image/png' href=getVersionedPath('/images/icon/icon-512.png'))
+    link(rel='icon' sizes='256x256' type='image/png' href=getVersionedPath('/images/icon/icon-256.png'))
+    link(rel='icon' sizes='128x128' type='image/png' href=getVersionedPath('/images/icon/icon-128.png'))
+    link(rel='icon' sizes='72x72' type='image/png' href=getVersionedPath('/images/icon/icon-72.png'))
     link(rel='icon' sizes='57x57' type='image/png' href=getVersionedPath('/images/icon/icon-57.png'))
+    link(rel='icon' sizes='32x32' type='image/png' href=getVersionedPath('/images/icon/icon-32.png'))
     link(rel='icon' sizes='16x16' type='image/png' href=getVersionedPath('/images/icon/icon-16.png'))
     link(rel='icon' sizes='any' type='image/svg+xml' href=getVersionedPath('/images/icon/icon.svg'))
     link(rel='shortcut icon' type='image/x-icon' href=getVersionedPath('/images/icon/icon-512.png'))
     link(content="https://app-leader.herokuapp.com/" rel="canonical")
+    link(rel="preconnect" async href="//app-leader.herokuapp.com/")
+    link(rel="preconnect" async href="//unsplash.com/")
     if typeof css !== "undefined"
       each style in css
-        link(rel='stylesheet' href=style)
+        link(rel='stylesheet' href=getVersionedPath(style))
   body
     div.cover.load
       div.shade
@@ -53,4 +59,4 @@ html(lang="en" manifest='/app.cache')
     script(src='/js/cache.min.js' async)
     if typeof js !== "undefined"
       each scripts in js
-        script(src=scripts async)
+        script(src=getVersionedPath(scripts) async)
