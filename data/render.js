@@ -8,11 +8,12 @@ module.exports = {
             "Social",
             "Personal",
             "Education",
-            "Conclusion"
+            "Conclusion",
+            "Works-Cited"
         ],
         "tab_focus": "Focus",
         "hero": {
-            "src": "/images/bkg.jpg",
+            "src": "/images/icon/icon-512.png",
             "alt": "An iamge of a .."
         },
         "content": {
@@ -31,11 +32,12 @@ module.exports = {
                 "Social",
                 "Personal",
                 "Education",
-                "Conclusion"
+                "Conclusion",
+                "Works-Cited"
             ],
             "tab_focus": "Focus",
             "hero": {
-                "src": "/images/bkg.jpg",
+                "src": "/images/icon/icon-512.png",
                 "alt": "An iamge of a .."
             },
             "content": {

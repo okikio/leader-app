@@ -35,16 +35,24 @@ function css(done) {
 }
 
 function image(done) {
-    return gulp.src('client/images/*.{png,svg}') // jpeg,jpg,,svg
+    return gulp.src('client/images/**/*.{png,svg}') // jpeg,jpg,,svg
         .pipe(imageop())
         .pipe(gulp.dest('client/images')),
         
-        gulp.src('client/images/*')
-        .pipe(gulp.dest('client/images')),
+        gulp.src('client/images/**/*')
+        .pipe(gulp.dest('public/images')),
         console.log("Finished ... Image".red), done();
 }
 
 function fontgen(done) {
+    /*
+        sudo apt-get update
+        sudo apt-get install add-apt-repository
+        sudo apt-get install software-properties-common
+        sudo add-apt-repository ppa:fontforge/fontforge
+        sudo apt-get update
+        sudo apt-get install fontforge
+    */
     return gulp.src("./client/fonts/**/*.{ttf,otf}")
         .pipe(fontGen({
             dest: "public/fonts/"
