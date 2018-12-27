@@ -14,5 +14,6 @@ header.header
       section.navbar-foot
         a.icon-btn.navbar-backup
           i.icon.material-icons expand_less
-        a.icon-btn.navbar-menu
-          i.material-icons.icon menu
+        if tabs.length > 0  
+          a.icon-btn.navbar-menu
+            i.material-icons.icon menu
