@@ -8,6 +8,7 @@
         "build-watch": "./bin/build-watch.js",
         "git-run": "./bin/git-run.js",
         "compile": "./bin/compile.js",
+        "cache": "./bin/cache.js",
         "build": "./bin/build.js"
     },
     "scripts": {

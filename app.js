@@ -9,7 +9,6 @@ var fs = require("fs");
 
 // Caching
 var staticify = require('staticify')(path.join(__dirname, 'public'));
-// _cache();
 
 // List of routers 
 var Router = require('./util/router');
@@ -64,42 +63,5 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('templates/error', error);
 });
-
-function _cache() {
-    var filesToCache = [
-            '/'
-        ]
-        .concat(
-            map_cache(""),
-            map_cache("/images"),
-            map_cache("/js"),
-            map_cache("/css")
-            , map_cache("/fonts")
-            );
-
-    function map_cache(path) {
-        var _path = __dirname + "/public" + (path + "");
-        const filesNames = fileList(_path, path + "/");
-        return filesNames;
-    }
-
-    function fileList(dir, _path) {
-        return fs.readdirSync(dir).reduce(function(list, file) {
-            var name = path.join(dir, file);
-            var isDir = fs.statSync(name).isDirectory();
-            return list.concat(isDir ? fileList(name, _path + file + "/") : [_path + file]);
-        }, []);
-    }
-
-    var begin = ['CACHE MANIFEST', '#v0.0.1 change this to force update\n', '# Cache', 'CACHE:\n'].join("\n");
-    var end = ['\n\nNETWORK:', '*\n', 'FALLBACK:', '/ /'].join("\n");
-    fs.writeFile(__dirname + '/public/app.cache', (begin + filesToCache.join('\n') + end), function(err) {
-        if (err) { throw err; }
-    });
-
-    fs.writeFile(__dirname + '/client/js/cachelist.js', "var filesToCache = " + JSON.stringify(filesToCache) + ";", function(err) {
-        if (err) { throw err; }
-    });
-}
 
 module.exports = app;

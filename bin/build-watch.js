@@ -16,9 +16,6 @@ watch(watchFile, { recursive: true }, function(evt, name) {
     console.log('%s'.cyan + ' got ' + evt + 'd', name); // Update + "d"
     if (evt != "delete") { 
         shell.exec("compile");
-        shell.exec("gulp js"); 
-        shell.exec("gulp css"); 
-        shell.exec("gulp font"); 
-        shell.exec("gulp render"); 
+        shell.exec("gulp");
     }
 });
