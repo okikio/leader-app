@@ -52,6 +52,7 @@ function fontgen(done) {
         sudo add-apt-repository ppa:fontforge/fontforge
         sudo apt-get update
         sudo apt-get install fontforge
+        
     */
     return gulp.src("./client/fonts/**/*.{ttf,otf}")
         .pipe(fontGen({
