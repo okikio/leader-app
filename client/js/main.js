@@ -100,7 +100,7 @@ var ImgLoad = function() {
         t.onload = function() {
             var o = $(t);
             o.attr("alt", e),
-            o.attr("class", r),
+            o.attr("class", r + " load-img"),
             a.before(o.get(0)),
             $(a).remove();
         },
@@ -171,7 +171,7 @@ HeroImg.each(function(i) {
     t.onload = function() {
         var o = $(t);
         o.attr("alt", _alt),
-        o.attr("class", _class);
+        o.attr("class", _class + " load-img");
         a.after(t);
         $(a).remove();
     },

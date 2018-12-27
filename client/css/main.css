@@ -2,6 +2,10 @@
 *,
 :before,
 :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
     box-sizing: border-box;
     font-size: 100%;
     outline: none;
@@ -35,7 +39,7 @@
 
 @keyframes rot {
     to {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
     }
 }
 
@@ -55,9 +59,17 @@
     color: #fff;
 }
 
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
 html,
 body {
-    font-family: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue",
+    font-family: "Roboto Slab", "Helvetica", "Helvetica Neue",
         "Arial", sans-serif;
     transition: all 0.2s ease;
     background: #ffffff;
@@ -75,15 +87,15 @@ body {
     -webkit-flex-direction: column;
     -webkit-box-orient: vertical;
     -ms-flex-direction: column;
-    flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -webkit-box;
+    display: -moz-box;
     position: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
-    display: -moz-box;
     min-height: 100vh;
     display: flex;
     height: 100%;
@@ -160,6 +172,10 @@ p {
 }
 
 hr {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box; 
+    -o-box-sizing: content-box; 
     box-sizing: content-box;
     overflow: visible;
     height: 0;
@@ -181,6 +197,15 @@ load-img {
     animation: load 0.5s ease-in infinite alternate;
     background: #252b33;
     min-height: 300px;
+}
+
+img.load-img {
+    animation: show 0.5s ease-in linear;
+}
+
+@keyframes show {
+    from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 a {
@@ -230,6 +255,10 @@ li {
 }
 
 hr {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box; 
+    -o-box-sizing: content-box; 
     box-sizing: content-box;
     border-style: inset;
     border-width: 1px;
@@ -251,7 +280,7 @@ div.cover {
 }
 
 div.cover,div.cover div.shade {
-    transition: .5s all ease;
+    transition: 3s all ease;
     z-index: -3000;
     height: 100%;
     width: 100%;
@@ -266,10 +295,10 @@ div.load.cover {
 div.load div.shade {
     background: #000;
     display: block;
-    opacity: .5!important
+    opacity: .5 !important
 }
 
-div.load div.loader {
+div.load .loader {
     animation: rot .8s linear infinite;
     border-bottom-color: transparent;
     border-top-color: transparent;
@@ -312,12 +341,35 @@ div.load div.loader {
 }
 
 /* -- Icons & Font -- */
-.icon {
+.material-icons {
+    font-family: "MaterialIcons-Regular";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
-    font-family: "Material Icons";
+    vertical-align: middle;
+    letter-spacing: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap;
+    font-weight: normal;
+    position: relative;
+    font-size: inherit;
+    font-style: normal;
+    word-wrap: normal;
+    line-height: 1;
+    direction: ltr;
+    height: 1em;
+    width: 1em;
+}
+
+.icon {
+    font-family: "MaterialIcons-Regular";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
     vertical-align: middle;
     letter-spacing: normal;
     display: inline-block;
@@ -397,7 +449,6 @@ div.load div.loader {
     transition: all 0.5s ease;
     align-self: stretch;
     align-items: center;
-    max-width: 1000px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -411,14 +462,18 @@ div.load div.loader {
 }
 
 .navbar-title {
-    font-family: "Ubuntu", "Permanent Marker", "Roboto", "Helvetica", "Arial", sans-serif !important;
+    font-family: "Ubuntu", "Roboto Slab", "Helvetica", "Arial", sans-serif !important;
+/* 	box-shadow: 0px 0 15px 1px #f36; */
     letter-spacing: 0.02em;
     text-decoration: none;
+	border-radius: 2px;
     position: relative;
     font-weight: 700;
     font-size: 20px;
     flex-shrink: 0;
-    display: block;
+	margin: 5px 0;
+	height: 35px;
+	width: 35px;
     color: #f36;
 }
 
@@ -428,16 +483,26 @@ div.load div.loader {
     color: #c62828;
 }
 
+.navbar-logo {
+	border: 3px solid #f36;
+	border-radius: 2px;
+    display: block;
+	height: auto;
+	width: 100%;
+}
+
 .navbar-spacer {
     flex: 1;
 }
 
 ul.navbar-list {
     transition: all 0.5s ease;
+    align-self: stretch;
+    align-items: center;
     list-style: none;
     overflow: auto;
-  	min-width: 0;
     height: 100%;
+	width: 100%;
     margin: 0;
 }
 
@@ -452,7 +517,7 @@ ul.navbar-list {
 }
 
 li.navbar-link a {
-	word-break: keep-all !important;
+	font-family: "Ubuntu", "Roboto Slab", sans-serif;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -478,7 +543,7 @@ li.navbar-link-focus a {
     align-items: center;
     position: absolute;
     margin-right: auto;
-    padding: 0 25px;
+    padding: 0 20px;
     display: flex;
     z-index: 120;
     float: right;
@@ -488,14 +553,23 @@ li.navbar-link-focus a {
     top: 0;
 }
 
-.navbar-backup .icon {
+.navbar-menu {
+	background-color: #fff;
+	margin-left: 5px;
+}
+
+.navbar-menu .icon, .navbar-backup .icon {
+    color: #f36 !important;
+}
+
+.navbar-backup:hover .icon {
     color: #010101 !important;
 }
 
 @media (min-width: 600px) {
     .navbar-layout {
         position: relative;
-        overflow: auto;
+		overflow: auto;
         display: flex;
     }
     .navbar-head {
@@ -504,19 +578,17 @@ li.navbar-link-focus a {
     .navbar-head,
     li.navbar-link {
 		word-break: keep-all !important;
-        display: inline-block;
         position: relative;
   		flex-wrap: nowrap;
-        float: left;
+        display: flex;
     }
     ul.navbar-list {
-        justify-content: left;
+  		white-space: nowrap;
   		flex-wrap: nowrap;
         max-height: 100%;
-        overflow: hidden;
+        overflow: auto;
         display: flex;
 		width: 100%;
-        flex: 1;
     }
     li.navbar-link a {
 		word-break: keep-all !important;
@@ -833,7 +905,7 @@ li.navbar-link-focus a {
 }
 
 .layer-content {
-    font-family: 'Roboto Slab', "Roboto", sans-serif;
+    font-family: "Roboto Slab", sans-serif;
     position: relative;
     line-height: 28px;
     font-weight: 400;
@@ -1060,7 +1132,7 @@ load-img.layer-hero-img {
 }
 
 .layer-hero-type {
-    font-family: "Helvetica", "Roboto", "Source Sans Pro", "Arial", sans-serif;
+    font-family: "Helvetica", "Roboto Slab", "Arial", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.125em;
     display: inline-block;
@@ -1074,7 +1146,7 @@ load-img.layer-hero-img {
 }
 
 .layer-hero-title {
-    font-family: "Josefin Sans", "Source Sans Pro", "Arial", sans-serif;
+    font-family: "Arial", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
@@ -1083,46 +1155,6 @@ load-img.layer-hero-img {
     font-weight: 500;
     font-size: 70px;
     color: #fff;
-}
-
-.layer-hero-author {
-    font-family: "Roboto", "Source Sans Pro", "Arial", sans-serif;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    vertical-align: baseline;
-    font-style: italic;
-    position: absolute;
-    display: block;
-    bottom: 120px;
-    color: #fff;
-    left: 50%;
-}
-
-.layer-hero-author-img {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    margin-bottom: 5px;
-    height: 40px;
-    width: 40px;
-}
-
-.layer-hero-author p {
-    font: italic 400 12px/1.5em "Roboto", "Source Sans Pro", sans-serif;
-    vertical-align: baseline;
-    margin: 0 auto;
-}
-
-.layer-hero-author a {
-    font: 400 13px/1.5em "Source Sans Pro", sans-serif;
-    display: inline !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-weight: bold;
-    color: white;
 }
 
 @media (max-width: 600px) {
@@ -1140,8 +1172,7 @@ load-img.layer-hero-img {
 
 /* -- Components-- */
 .layer-title {
-    font-family: "Permanent Marker", "Roboto", sans-serif;
-    font-family: 'Ubuntu', 'Open Sans', "Josefin Sans", "Source Sans Pro", "Permanent Marker", "Roboto", "Arial", sans-serif;
+    font-family: 'Ubuntu', 'Open Sans', "Roboto Slab", "Arial", sans-serif;
 /*     text-transform: uppercase; */
     font-size: 30px;
     font-weight: 700;

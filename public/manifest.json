@@ -13,8 +13,28 @@
             "type": "image/png"
         },
         {
+            "src": "./images/icon/icon-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
             "src": "./images/icon/icon-57.png",
             "sizes": "57x57",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icon/icon-72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icon/icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icon/icon-256.png",
+            "sizes": "256x256",
             "type": "image/png"
         },
         {
