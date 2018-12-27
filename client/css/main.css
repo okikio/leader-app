@@ -554,7 +554,7 @@ li.navbar-link-focus a {
 }
 
 .navbar-menu {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	margin-left: 5px;
 }
 
@@ -562,7 +562,7 @@ li.navbar-link-focus a {
     color: #f36 !important;
 }
 
-.navbar-backup:hover .icon {
+.navbar-menu:hover .icon, .navbar-backup:hover .icon {
     color: #010101 !important;
 }
 

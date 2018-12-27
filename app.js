@@ -70,6 +70,7 @@ function _cache() {
             '/'
         ]
         .concat(
+            map_cache(""),
             map_cache("/images"),
             map_cache("/js"),
             map_cache("/css")
@@ -90,7 +91,7 @@ function _cache() {
         }, []);
     }
 
-    var begin = ['CACHE MANIFEST', '#v0.0.2 change this to force update\n', '# Cache', 'CACHE:\n'].join("\n");
+    var begin = ['CACHE MANIFEST', '#v0.0.1 change this to force update\n', '# Cache', 'CACHE:\n'].join("\n");
     var end = ['\n\nNETWORK:', '*\n', 'FALLBACK:', '/ /'].join("\n");
     fs.writeFile(__dirname + '/public/app.cache', (begin + filesToCache.join('\n') + end), function(err) {
         if (err) { throw err; }
