@@ -24,9 +24,16 @@ var Scroll = function Scroll() {
         (window.scrollY > 50 ||
             NavList.hasClass("navbar-list-show") && $(window).width() < 700 ? "add" : "remove") + "Class"](
         "navbar-focus");
-    Navbar.css({
-        "box-shadow": "0 " + max(_Per(2.5, -10), 0) + "px 10px 5px rgba(0, 0, 0, 0.12)"
-    });
+        
+    if (Body.scrollTop() < ($(window).height() - Navbar.height())) {
+        Navbar.css({
+            "box-shadow": "0 " + max(_Per(2.5, -10), 0) + "px 10px 5px rgba(0, 0, 0, 0.12)"
+        });
+    } else {
+        Navbar.css({
+            "box-shadow": "0 " + min(_Per(-2.5, 10), -2.5) + "px 10px 5px rgba(0, 0, 0, 0.12)"
+        });
+    }
 
 
     Hero.each(function(i, hero) {
