@@ -1,13 +1,15 @@
-var createError = require('http-errors');
-var express = require('express');
-var http = require("http");
-var path = require('path');
 var cookieParser = require('cookie-parser');
+var createError = require('http-errors');
+var compress = require('compression');
+var express = require('express');
 var logger = require('morgan');
 var _ = require("underscore");
-var compress = require('compression');
+var path = require('path');
 var fs = require("fs");
+
+// Caching
 var staticify = require('staticify')(path.join(__dirname, 'public'));
+// _cache();
 
 // List of routers 
 var Router = require('./util/router');
@@ -19,9 +21,6 @@ var routeList = routes["routes"];
 var routers = routes["routers"];
 var error = routes["error"];
 
-// Caching
-// _cache();
-
 app.locals = {
     getVersionedPath: staticify.getVersionedPath
 };
@@ -30,7 +29,7 @@ app.locals = {
 app.use(compress());
 app.use(staticify.middleware);
 app.use(function(req, res, next) {
-    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|cache)$/, '/$1.$2');
+    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|cache|json|pug|html|otf|tff|woff|woff2|eot)$/, '/$1.$2');
     next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
@@ -51,11 +50,7 @@ app.use(cookieParser());
 
 // Set route to routers 
 _.each(routeList, function(route, path, obj) {
-    if (_.isFunction(routers[route])) {
-        routers[route](app.route(route));
-    } else {
-        app.use(path, Router(routers, route));
-    }
+    app.use(path, Router(routers, route));
 });
 
 // 404 and forward to error handler
@@ -67,13 +62,12 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
     // Render the error page
     res.status(err.status || 500);
-    res.render('template/error', error);
+    res.render('templates/error', error);
 });
 
 function _cache() {
     var filesToCache = [
-            '/',
-            '/fonts/fonts.min.css'
+            '/'
         ]
         .concat(
             map_cache("/images"),
@@ -85,11 +79,10 @@ function _cache() {
     function map_cache(path) {
         var _path = __dirname + "/public" + (path + "");
         const filesNames = fileList(_path, path + "/");
-        return filesNames
+        return filesNames;
     }
 
     function fileList(dir, _path) {
-        let path_ = _path || "";
         return fs.readdirSync(dir).reduce(function(list, file) {
             var name = path.join(dir, file);
             var isDir = fs.statSync(name).isDirectory();
