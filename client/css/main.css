@@ -74,8 +74,8 @@ body {
     transition: all 0.2s ease;
     background: #ffffff;
     line-height: 1.15;
-    min-height: 100vh;
-    font-weight: 400;
+    min-height: 100vh;    
+    font-weight: 600;
     font-size: 15px;
     overflow: auto;
     color: #9d9d9d;
@@ -341,30 +341,7 @@ div.load .loader {
 }
 
 /* -- Icons & Font -- */
-.material-icons {
-    font-family: "MaterialIcons-Regular";
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-    letter-spacing: normal;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: none;
-    white-space: nowrap;
-    font-weight: normal;
-    position: relative;
-    font-size: inherit;
-    font-style: normal;
-    word-wrap: normal;
-    line-height: 1;
-    direction: ltr;
-    height: 1em;
-    width: 1em;
-}
-
-.icon {
+.material-icons, .icon {
     font-family: "MaterialIcons-Regular";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -517,7 +494,7 @@ ul.navbar-list {
 }
 
 li.navbar-link a {
-	font-family: "Ubuntu", "Roboto Slab", sans-serif;
+	font-family: "Helvetica Neue", "Ubuntu", "Roboto Slab", sans-serif;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -907,8 +884,8 @@ li.navbar-link-focus a {
 .layer-content {
     font-family: "Roboto Slab", sans-serif;
     position: relative;
-    line-height: 28px;
-    font-weight: 400;
+    line-height: 28px;    
+    font-weight: 600;
     display: block;
 }
 
