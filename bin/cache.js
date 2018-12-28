@@ -16,8 +16,7 @@ function _cache() {
     console.log("Starting!!!".green)
     var root = path.normalize(__dirname + '/../');
     var filesToCache = [
-            '/',
-            '/404'
+            '/'
         ]
         .concat(
             map_cache(""),

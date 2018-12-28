@@ -4,7 +4,6 @@ CACHE MANIFEST
 # Cache
 CACHE:
 /
-/404
 /app.cache
 /css/main.min.css
 /fonts/MaterialIconMod-min.css
