@@ -304,7 +304,6 @@ CACHE:
 /fonts/Ubuntu-LightItalic.woff
 /fonts/Ubuntu-LightItalic.woff2
 /fonts/fonts.min.css
-/404
 
 NETWORK:
 *

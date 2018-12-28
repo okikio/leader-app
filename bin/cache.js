@@ -23,8 +23,7 @@ function _cache() {
             map_cache("/images"),
             map_cache("/js"),
             map_cache("/css")
-            , map_cache("/fonts"),
-            ['/404']
+            , map_cache("/fonts")
             );
 
     function map_cache(path) {
