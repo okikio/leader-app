@@ -56,7 +56,7 @@ html(lang="en" manifest='/app.cache')
     include ../components/footer.pug
     script(src=getVersionedPath('/js/jquery.min.js'))
     script(src=getVersionedPath('/js/main.min.js'))
-    script(src='/js/cache.min.js' async)
+    script(src='/js/cache.min.js' defer)
     if typeof js !== "undefined"
       each scripts in js
-        script(src=getVersionedPath(scripts) async)
+        script(src=getVersionedPath(scripts) defer)
