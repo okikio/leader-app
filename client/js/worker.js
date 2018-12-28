@@ -11,7 +11,7 @@ self.addEventListener('install', function(e) {
     );
 });
 self.addEventListener('activate', function(event) {
-    var cacheWhitelist = ['app-science'];
+    var cacheWhitelist = [cacheName];
     event.waitUntil(
         caches.keys().then(function(cacheNames) {
             return Promise.all(
