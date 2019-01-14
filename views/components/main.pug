@@ -86,7 +86,7 @@
       var Top = Body.scrollTop();
       $('span.layer-content-txt li.layout-padding-vert').each(function() {
           var $thisDist = $(this).offset().top;
-          if (Top + 500 >= $thisDist + Top && $(this).attr('id')) {
+          if (Top + 450 >= $thisDist + Top && $(this).attr('id')) {
               var makeActive = $(this).attr('id');
               $("li.navbar-link").removeClass('navbar-link-focus');
               $('li.navbar-link a[link="' + makeActive + '"]').parent(".navbar-link").addClass('navbar-link-focus');
