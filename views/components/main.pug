@@ -82,15 +82,11 @@
     var $ = window.$,
         NavLink = $(".navbar-link"),
         Body = $("body");
-    var Hero = $(".layer-hero");
-    var min = Math.min,
-        max = Math.max;
-    var map = function map(e, t, n, r, i) { return r + (i - r) * ((e - t) / (n - t)); };
     var Scroll = function Scroll() {
       var Top = Body.scrollTop();
       $('span.layer-content-txt li.layout-padding-vert').each(function() {
           var $thisDist = $(this).offset().top;
-          if (Top + 300 >= $thisDist + Top && $(this).attr('id')) {
+          if (Top + 500 >= $thisDist + Top && $(this).attr('id')) {
               var makeActive = $(this).attr('id');
               $("li.navbar-link").removeClass('navbar-link-focus');
               $('li.navbar-link a[link="' + makeActive + '"]').parent(".navbar-link").addClass('navbar-link-focus');
