@@ -1,4 +1,5 @@
 // List of routes
 module.exports = {
-    "/": "index"
+    "/": "index",
+    "/traits": "traits"
 };
