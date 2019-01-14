@@ -39,16 +39,7 @@ module.exports = {
         },
         "traits": {
             "title": "Traits - Leaders",
-            "tabs": [
-                "Intro",
-                "Technical",
-                "Psychology",
-                "Social",
-                "Personal",
-                "Education",
-                "Conclusion",
-                "Works-Cited"
-            ],
+            "tabs": [],
             "tab_focus": "Focus",
             "hero": {
                 "src": "/images/icon/icon-512.png",
