@@ -6,5 +6,5 @@ var tabs = require("../containers/tabs");
 // List of routers
 module.exports = {
     "index": page(title("Leaders")),
-    "traits": page(title("Traits - Leaders"), { nothomepage: true }, tabs(0))
+    "traits": page(title("Traits - Leaders"), { nothomepage: true }, tabs("Humility", "Patience", "Responsibility", "Empathy", "[Bonus]"))
 };

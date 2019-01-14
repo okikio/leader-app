@@ -9,7 +9,7 @@ header.header
         ul.navbar-list.navbar-list-hide.navbar-spacer
           each val in tabs
             li.navbar-link
-              a(link=val.toLowerCase())= val      
+              a(link=val.replace("[", "").replace("]", "").toLowerCase())= val      
       section.navbar-spacer
       section.navbar-foot
         a.icon-btn.navbar-backup

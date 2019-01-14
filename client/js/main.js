@@ -34,7 +34,15 @@ var Scroll = function Scroll() {
             "box-shadow": "0 " + min(_Per(-2.5, 10), -2.5) + "px 10px 5px rgba(0, 0, 0, 0.12)"
         });
     }
-
+    
+    $('.layer-content').each(function() {
+        var $thisDist = $(this).offset().top;
+        if (Top + 300 >= $thisDist + Top && $(this).attr('id')) {
+            var makeActive = $(this).attr('id');
+            $("li.navbar-link").removeClass('navbar-link-focus');
+            $('li.navbar-link a[link="' + makeActive + '"]').parent(".navbar-link").addClass('navbar-link-focus');
+        }
+    });
 
     Hero.each(function(i, hero) {
         var _Hero = Hero.eq(i),
@@ -60,14 +68,6 @@ var Scroll = function Scroll() {
             }
         };
         Sub();
-        $('.layer-content').each(function() {
-            var $thisDist = $(this).offset().top;
-            if (Top + 300 >= $thisDist + Top && $(this).attr('id')) {
-                var makeActive = $(this).attr('id');
-                $("li.navbar-link").removeClass('navbar-link-focus');
-                $('li.navbar-link a[link="' + makeActive + '"]').parent(".navbar-link").addClass('navbar-link-focus');
-            }
-        });
         if (Pos <= 0 && Height + Pos >= 0 ||
             Math.round(Per(0, 100)) == 0 || Math.round(Per(0, 100)) == 100) {
             if (_Hero.hasClass("layer-hero-sub")) { Sub(); }
