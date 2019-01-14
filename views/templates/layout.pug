@@ -1,6 +1,5 @@
 doctype html
-html(lang="en")
-  //  manifest='/app.cache'
+html(lang="en" manifest='/app.cache')
   head
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
@@ -57,7 +56,7 @@ html(lang="en")
     include ../components/footer.pug
     script(src=getVersionedPath('/js/jquery.min.js'))
     script(src=getVersionedPath('/js/main.min.js'))
-    // script(src='/js/cache.min.js' defer)
+    script(src='/js/cache.min.js' defer)
     if typeof js !== "undefined"
       each scripts in js
         script(src=getVersionedPath(scripts) defer)
