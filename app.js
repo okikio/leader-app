@@ -5,10 +5,6 @@ var express = require('express');
 var logger = require('morgan');
 var _ = require("underscore");
 var path = require('path');
-var fs = require("fs");
-
-// Caching
-var staticify = require('staticify')(path.join(__dirname, 'public'));
 
 // List of routers 
 var Router = require('./util/router');
@@ -20,22 +16,9 @@ var routeList = routes["routes"];
 var routers = routes["routers"];
 var error = routes["error"];
 
-app.locals = {
-    getVersionedPath: staticify.getVersionedPath
-};
-
 // Compress/GZIP Server
 app.use(compress());
-app.use(staticify.middleware);
-app.use(function(req, res, next) {
-    req.url = req.url.replace(/\/([^\/]+)\.[0-9a-f]+\.(css|js|jpg|png|gif|svg|cache|json|pug|html|otf|tff|woff|woff2|eot)$/, '/$1.$2');
-    next();
-});
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: '30 days' }));
-app.get("/app.cache", function(req, res) {
-    res.header("Content-Type", "text/cache-manifest");
-    res.end("CACHE MANIFEST");
-});
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1 day' }));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
