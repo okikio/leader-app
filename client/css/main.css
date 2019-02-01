@@ -1218,7 +1218,6 @@ load-img.layer-hero-img {
 /* -- Tiles -- */
 .layer-tile {
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.24);
-	transition: all 0.2s ease;
 	background: #3c3c3c;
 	margin-bottom: 10px;
 	position: relative;
