@@ -1,3 +1,73 @@
+style.
+  .top-nav {
+    position: fixed;
+    z-index: 1400;
+    width: 100%;
+    top: 15px;
+  }
+  .top-nav .navbar-layout {
+    position: relative;
+    display: flex;
+  }
+  .top-nav .navbar-main {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    border-radius: 25px;
+  }
+  ul.top-nav-list {
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    align-self: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style: none;
+    max-height: 100%;
+    padding: 8px 0;
+    overflow: auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  li.topbar-link a {
+    font-family: "Ubuntu", "Roboto Slab", sans-serif;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    word-break: keep-all !important;
+    text-decoration: none;
+    position: relative;
+    flex-wrap: nowrap;
+    padding: 2px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    color: #727276;
+    display: flex;
+    min-width: 0;
+    width: 100%;
+  }
+  li.topbar-link:last-of-type a {
+    border-right: none;
+  }
+  li.topbar-link a:hover {
+    cursor: pointer;
+    color: #CF2953;
+  }
+  li.topbar-link-focus a {
+    font-family: "Roboto Slab", "Ubuntu", sans-serif;
+    color: #000;
+  }
+  
+section.top-nav
+  article.navbar-layout
+    section.navbar-spacer
+    section.navbar-main
+      ul.top-nav-list.navbar-spacer
+        li.topbar-link(class=!/trait/gi.test(title) ? "topbar-link-focus" : "")
+          a(href='/') Home
+        li.topbar-link(class=/trait/gi.test(title) ? "topbar-link-focus" : "")
+          a(href='/traits') Traits
+    section.navbar-spacer
+            
 header.header
   nav.navbar.navbar-fixed
     article.navbar-layout
