@@ -13,7 +13,6 @@
     "scripts": {
         "dev": "nodemon ./server",
         "start": "node ./server",
-        "build": "node ./bin/build",
         "build-watch": "node ./bin/build-watch"
     },
     "repository": {
