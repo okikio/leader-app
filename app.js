@@ -18,7 +18,7 @@ var error = routes["error"];
 
 // Compress/GZIP Server
 app.use(compress());
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1 day' }));
+app.use(express.static(path.join(__dirname, 'public'),{maxAge:'2592000'}));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));

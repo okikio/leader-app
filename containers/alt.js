@@ -1,8 +1,1 @@
-var _ = require("underscore");
-var pick = require("../util/pick");
-
-// Shared similarites between alt containers
-module.exports = function(alt) {
-    var value = { "alt":  pick(alt, "An iamge of a ..") };
-    return _.extend({}, value);
-};
+var _=require("underscore");var pick=require("../util/pick");module.exports=function(alt){var value={"alt":pick(alt,"An iamge of a ..")};return _.extend({},value)}
