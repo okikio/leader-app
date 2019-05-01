@@ -201,15 +201,13 @@ GoDown.on("click", function() {
     Body.animate({ scrollTop: End.offset().top + Top + 1 }, 600, Scroll);
 });
 Body.scroll(Scroll);
-$(document).ready(function() {
-    $("div.cover").on("click", function() {
-        $(this).removeClass("load");
-    });
-    setTimeout(function() {
-        $("div.cover").removeClass("load");
-        $("a[href|='/']").click(function(e) {
-            $("div.cover").addClass("load");
-        });
-    }, 500);
-    ImgLoad();
+$("div.cover").on("click", function() {
+    $(this).removeClass("load");
 });
+setTimeout(function() {
+    $("div.cover").removeClass("load");
+    $("a[href|='/']").click(function(e) {
+        $("div.cover").addClass("load");
+    });
+}, 500);
+$(document).ready(function() { ImgLoad(); });
