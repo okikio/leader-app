@@ -21,7 +21,6 @@ var filesToCache = [
 "js/jquery.min.js",
 "js/main.min.js",
 "js/sw.min.js",
-"css/error.min.css",
 "css/main.min.css",
 "fonts/MaterialIconMod.css",
 "fonts/MaterialIconMod.eot",
