@@ -16,13 +16,13 @@ function render(done) {
 }
 
 function js(done) {
-    return gulp.src(['client/js/*.js', '!client/js/*.min.js'])
+    return gulp.src(['client/**/*.js', '!client/**/*.min.js'])
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('public/js')),
+        .pipe(gulp.dest('public')),
 
-        gulp.src('client/js/*.min.js')
-        .pipe(gulp.dest('public/js')),
+        gulp.src('client/**/*.min.js')
+        .pipe(gulp.dest('public')),
         console.log("Finished ... JS".red), done();
 }
 

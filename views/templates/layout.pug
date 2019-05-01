@@ -60,7 +60,7 @@ html(lang="en")
       var navigator = window.navigator;
       if ('serviceWorker' in navigator) {
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register('/js/sw.min.js')
+          navigator.serviceWorker.register('/sw.min.js')
               .then(function(registry) {
                   // Registration was successful
                   console.log('[Service Worker] registration successful with scope: ', registry.scope);
