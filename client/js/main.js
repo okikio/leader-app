@@ -213,31 +213,3 @@ $(document).ready(function() {
     }, 500);
     ImgLoad();
 });
-var navigator = window.navigator;
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function(registries) {
-        if (registries.length == 0) {
-            navigator.serviceWorker.register('/js/sw.min.js')
-                .then(function(registry) {
-                    // Registration was successful
-                    console.log('[Service Worker] registration successful with scope: ', registry.scope);
-                    if (registry.installing) {
-                        console.log('[Service Worker] installing');
-                    }
-                    else if (registry.waiting) {
-                        console.log('[Service Worker] installed');
-                    }
-                    else if (registry.active) {
-                        console.log('[Service Worker] active');
-                    }
-                })
-                .catch(function(err) {
-                    // Registration failed :(
-                    console.error('[Service Worker] registration failed: ', err);
-                });
-        }
-    });
-}
-else {
-    console.log("No Service Worker's or App Cache Support")
-}

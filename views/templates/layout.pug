@@ -56,6 +56,8 @@ html(lang="en")
     include ../components/footer.pug
     script(src='./js/jquery.min.js')
     script(src='./js/main.min.js')
+    script.
+      var navigator=window.navigator;"serviceWorker"in navigator?navigator.serviceWorker.getRegistrations().then(function(a){0==a.length&&navigator.serviceWorker.register("/js/sw.min.js").then(function(a){console.log("[Service Worker] registration successful with scope: ",a.scope),a.installing?console.log("[Service Worker] installing"):a.waiting?console.log("[Service Worker] installed"):a.active&&console.log("[Service Worker] active")}).catch(function(a){console.error("[Service Worker] registration failed: ",a)})}):console.log("No Service Worker's or App Cache Support");
     if typeof js !== "undefined"
       each scripts in js
         script(src=scripts defer)
