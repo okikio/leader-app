@@ -1332,3 +1332,12 @@ load-img.layer-tile-img {
     color: #CF2953 !important;
     font-weight: 900;
 }
+
+
+/* Install Banner */
+.banner {
+    justify-content: center;
+    align-content: center;
+    display: none;
+    width: 100%;
+}

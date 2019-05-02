@@ -83,6 +83,7 @@ var filesToCache = [
     "fonts/SourceSansPro-Regular.woff2"
 ];
 self.addEventListener('install', function(event) {
+    console.log('Service worker install event!');
     event.waitUntil(
         caches.open(cacheName)
         .then(function(cache) {
@@ -90,30 +91,19 @@ self.addEventListener('install', function(event) {
         })
     );
 });
+
+self.addEventListener('activate', function(event) {
+    console.log('Service worker activate event!');
+});
+
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            return response || fetchAndCache(event.request);
+    console.log('Fetch intercepted for:', event.request.url);
+    event.respondWith(caches.match(event.request)
+        .then(function(cachedResponse) {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            return fetch(event.request);
         })
     );
 });
-
-function fetchAndCache(url) {
-    return fetch(url)
-        .then(function(response) {
-            // Check if we received a valid response
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
-            return caches.open(cacheName)
-                .then(function(cache) {
-                    cache.put(url, response.clone());
-                    return response;
-                });
-        })
-        .catch(function(error) {
-            console.log('Request failed:', error);
-            // You could return a custom offline 404 page here
-        });
-}
