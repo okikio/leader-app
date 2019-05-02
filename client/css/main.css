@@ -1336,8 +1336,15 @@ load-img.layer-tile-img {
 
 /* Install Banner */
 .banner {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     justify-content: center;
     align-content: center;
+    border-radius: 20em;
+    background: white;
+    position: fixed;
+    padding: 10px;
     display: none;
+    bottom: 150px;
+    margin: 10px;
     width: 100%;
 }
