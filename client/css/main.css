@@ -1342,6 +1342,7 @@ load-img.layer-tile-img {
     align-content: center;
     border-radius: 20em;
     padding: 10px 20px;
+    background: white;
     position: fixed;
     display: none;
     bottom: 150px;
