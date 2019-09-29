@@ -14,8 +14,8 @@ const watchFileColor = watchFile.reduce(function(acc, cur, i) {
 console.log('Watching'.red + ' for file changes on ' + watchFileColor);
 watch(watchFile, { recursive: true }, function(evt, name) {
     console.log('%s'.cyan + ' got ' + evt + 'd', name); // Update + "d"
-    if (evt != "delete") { 
-        shell.exec("compile");
-        shell.exec("gulp");
+    if (evt != "delete") {
+        shell.exec("npm run compile");
+        shell.exec("npx gulp");
     }
 });
