@@ -95,15 +95,15 @@ var Scroll = function Scroll() {
         Height = hData[i].h;
         Per = $Per(Top, Pos, Pos + Height);
 
-        // if (_Hero.hasClass("layer-hero-sub")) {
-        //     _Hero.find(".layer-hero-img").css({
-        //         transform: "translate(-50%, -" + (60 - max(min(Per(0, 20), 50), 0)) + "%)",
-        //     });
+        if (_Hero.hasClass("layer-hero-sub")) {
+            _Hero.find(".layer-hero-img").css({
+                transform: "translate(-50%, -" + (60 - max(min(Per(0, 20), 50), 0)) + "%)",
+            });
 
-        //     _Hero.find(".layer-hero-overlay").css({
-        //         opacity: max(min(Per(0.45, 1), 0.99), 0.45),
-        //     });
-        //  }
+            _Hero.find(".layer-hero-overlay").css({
+                opacity: max(min(Per(0.45, 1), 0.99), 0.45),
+            });
+         }
         if (Pos - Top <= 0 && Height + Pos - Top >= 0) {
             if (_Hero.hasClass("layer-hero-sub")) {
                 _Hero.find(".layer-hero-img").css({
