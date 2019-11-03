@@ -6,12 +6,12 @@ html(lang="en")
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta(http-equiv="Cache-Control" content="max-age=2592000")
     meta(charset='UTF-8')
-    
+
     link(rel='stylesheet' href='./fonts/fonts.min.css')
     link(rel='stylesheet' href='./css/main.min.css')
-    
+
     title= title
-    
+
     meta(content='website', property='og:type')
     meta(content='Leader', property='og:title')
     meta(content="A website containing Leadership projects. It's is one of a series of websites built by Okiki Ojo for school subjects.", property='og:description')
@@ -20,17 +20,17 @@ html(lang="en")
     meta(name='copyright', content='Copyright &copy; 2018 Okiki Ojo, Under a GNU Licence.')
     meta(name='author', content='Okiki Ojo')
 
-    
+
     link(rel="manifest" href="./manifest.json")
     meta(name='theme-color' content='#ff0064')
     meta(name='msapplication-navbutton-color' content='#ff0064')
     meta(name='apple-mobile-web-app-capable' content='yes')
     meta(name='apple-mobile-web-app-status-bar-style' content='#ff0064')
-    
+
     <!--[if IE]-->
       link(rel='shortcut icon' href='./images/icon/icon.ico')
     <!--<![endif]-->
-    
+
     link(rel='icon' sizes='512x512' type='image/png' href='./images/icon/icon-512.png')
     link(rel='icon' sizes='256x256' type='image/png' href='./images/icon/icon-256.png')
     link(rel='icon' sizes='128x128' type='image/png' href='./images/icon/icon-128.png')
@@ -50,7 +50,7 @@ html(lang="en")
     section#installBanner.banner
       button#installBtn
       | Install app
-    div.cover.load
+    //- div.cover.load
       div.shade
       div.loader
     include ../components/header.pug
@@ -59,7 +59,7 @@ html(lang="en")
     include ../components/footer.pug
     script(src='./js/jquery.min.js')
     script(src='./js/main.min.js')
-    script.
+    //- script.
       var navigator = window.navigator;
       if ('serviceWorker' in navigator) {
         window.addEventListener("load", function () {
@@ -85,22 +85,22 @@ html(lang="en")
       } else {
           console.log("No Service Worker's or App Cache Support")
       }
-      
+
       var deferredPrompt;
       window.addEventListener('beforeinstallprompt', event => {
-  
+
         // Prevent Chrome 67 and earlier from automatically showing the prompt
         event.preventDefault();
-  
+
         // Stash the event so it can be triggered later.
         deferredPrompt = event;
-  
+
         // Attach the install prompt to a user gesture
         document.querySelector('#installBtn').addEventListener('click', event => {
-  
+
           // Show the prompt
           deferredPrompt.prompt();
-  
+
           // Wait for the user to respond to the prompt
           deferredPrompt.userChoice
             .then(function (choiceResult) {
@@ -112,7 +112,7 @@ html(lang="en")
               deferredPrompt = null;
             });
         });
-  
+
         // Update UI notify the user they can add to home screen
         document.querySelector('#installBanner').style.display = 'flex';
       });
