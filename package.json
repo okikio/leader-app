@@ -37,24 +37,24 @@
     },
     "dependencies": {
         "compression": "1.7.4",
-        "cookie-parser": "~1.4.3",
-        "debug": "~2.6.9",
-        "express": "4.16.3",
-        "gulp-terser": "^1.2.0",
-        "http-errors": "1.7.3",
-        "morgan": "^1.9.1",
-        "nodemon": "^1.19.3",
-        "pug": "^3.0.1",
-        "underscore": "^1.12.1"
+        "cookie-parser": "~1.4.6",
+        "debug": "~4.3.3",
+        "express": "4.17.3",
+        "gulp-terser": "^2.1.0",
+        "http-errors": "2.0.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.15",
+        "pug": "^3.0.2",
+        "underscore": "^1.13.2"
     },
     "devDependencies": {
         "colors": "^1.4.0",
         "gulp": "^4.0.2",
-        "gulp-csso": "^3.0.1",
-        "gulp-rename": "^1.4.0",
-        "heroku": "^7.30.1",
-        "log-timestamp": "^0.2.1",
-        "node-watch": "^0.5.9",
+        "gulp-csso": "^4.0.1",
+        "gulp-rename": "^2.0.0",
+        "heroku": "^7.59.2",
+        "log-timestamp": "^0.3.0",
+        "node-watch": "^0.7.3",
         "shelljs": "^0.8.5"
     }
 }
