@@ -45,9 +45,7 @@
         "morgan": "^1.10.0",
         "nodemon": "^2.0.15",
         "pug": "^3.0.2",
-        "underscore": "^1.13.2"
-    },
-    "devDependencies": {
+        "underscore": "^1.13.2",
         "colors": "^1.4.0",
         "gulp": "^4.0.2",
         "gulp-csso": "^4.0.1",
